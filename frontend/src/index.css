@@ -39,3 +39,10 @@ html.lenis body {
 .lenis.lenis-scrolling iframe {
   pointer-events: none;
 }
+
+/* Remove black border from input focus */
+input:focus, textarea:focus, select:focus {
+  outline: none !important;
+  
+
+}
