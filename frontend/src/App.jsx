@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Testimonials from './components/Testimonials';
@@ -17,9 +17,11 @@ import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 import Chatbot from './components/Chatbot';
 import FeaturesSection from './components/FeatureSection';
-import OurTeachers from './pages/OurTeachers/OurTeachers';
-import Ib from './pages/ib/Ib';
-import BlogPage from './pages/blog/BlogPage';
+
+// Lazy load pages
+const OurTeachers = React.lazy(() => import('./pages/OurTeachers/OurTeachers'));
+const BlogPage = React.lazy(() => import('./pages/blog/BlogPage'));
+const Ib = React.lazy(() => import('./pages/ib/Ib'));
 
 const SmoothScrollContext = createContext(null);
 
@@ -105,11 +107,11 @@ function App() {
           </MainLayout>
         } />
         <Route path="/igcse-courses" element={<MainLayout><ModernIGCSE /></MainLayout>} />
-        <Route path="/ib-courses" element={<MainLayout><Ib /></MainLayout>} />
-        <Route path="/blog" element={<MainLayout><BlogPage /></MainLayout>} />
+        <Route path="/blog" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><BlogPage /></React.Suspense></MainLayout>} />
+        <Route path="/ib-courses" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><Ib /></React.Suspense></MainLayout>} />
         <Route path="/subject/:subject" element={<MainLayout><SubjectDetail /></MainLayout>} />
         <Route path="/enrollment-form" element={<MainLayout><EnrollmentForm /></MainLayout>} />
-        <Route path="/our-teachers" element={<MainLayout><OurTeachers /></MainLayout>} />
+        <Route path="/our-teachers" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><OurTeachers /></React.Suspense></MainLayout>} />
 
         {/* Chatbot Route - With Navbar, No Footer */}
         <Route path="/chatbot" element={
