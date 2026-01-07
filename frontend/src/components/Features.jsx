@@ -8,8 +8,8 @@ import featureBg3 from '../assets/premium_vector-1744112216017-ab0da51ca7ea.png'
 const featuresData = [
     {
         id: "01",
-        title: "AI Homework Help",
-        description: "Stuck on a problem? Our 24/7 AI tutor breaks down complex concepts instantly.",
+        title: "Smart Learning Assistant",
+        description: "Stuck on a problem? Our 24/7 learning support breaks down complex concepts instantly.",
         gradient: "from-emerald-400 to-teal-500",
         text: "text-emerald-700",
         backgroundImage: featureBg1
@@ -61,7 +61,7 @@ const Features = () => {
                         transition={{ delay: 0.1 }}
                         className="text-3xl md:text-4xl lg:text-5xl font-serif font-medium text-[#0f393b] mb-3"
                     >
-                        AI Tutors + Expert Teachers
+                        Smart Learning + Expert Teachers
                     </motion.h2>
                     
                     {/* Sub Headline (Italic) */}
@@ -106,10 +106,10 @@ const Features = () => {
                                 <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out" />
                                 
                                 {/* Overlay for better text readability */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/60 to-black/40" />
                                 
                                 {/* Additional overlay for text contrast */}
-                                <div className="absolute inset-0 bg-white/10 group-hover:bg-white/5 transition-all duration-500" />
+                                <div className="absolute inset-0 bg-white/5 group-hover:bg-white/0 transition-all duration-500" />
                                 
                                 {/* Animated Border Glow */}
                                 <div className={`absolute inset-0 rounded-[2.5rem] bg-gradient-to-r ${feature.gradient} opacity-0 group-hover:opacity-[0.3] blur-sm transition-opacity duration-500`} />

@@ -16,6 +16,8 @@ import EnrollmentForm from './components/EnrollmentForm';
 import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 import Chatbot from './components/Chatbot';
+import FeaturesSection from './components/FeatureSection';
+import OurTeachers from './pages/OurTeachers/OurTeachers';
 
 const SmoothScrollContext = createContext(null);
 
@@ -92,6 +94,7 @@ function App() {
                 <Hero />
                 <Features />
                 <Testimonials />
+                <FeaturesSection />
                 <Questions />
                 <Curriculum />
                 <Enroll />
@@ -102,6 +105,7 @@ function App() {
         <Route path="/igcse-courses" element={<MainLayout><ModernIGCSE /></MainLayout>} />
         <Route path="/subject/:subject" element={<MainLayout><SubjectDetail /></MainLayout>} />
         <Route path="/enrollment-form" element={<MainLayout><EnrollmentForm /></MainLayout>} />
+        <Route path="/our-teachers" element={<MainLayout><OurTeachers /></MainLayout>} />
 
         {/* Chatbot Route - With Navbar, No Footer */}
         <Route path="/chatbot" element={
