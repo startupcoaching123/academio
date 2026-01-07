@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Sparkles, CheckCircle2, ArrowRight, BookOpen, GraduationCap, ShieldCheck } from 'lucide-react';
+import { Search, Sparkles, CheckCircle2, ArrowRight, BookOpen, GraduationCap, ShieldCheck, Pencil } from 'lucide-react';
 import { motion } from 'framer-motion';
 import heroRobot from '../assets/hero.jpg';
 
@@ -43,7 +43,14 @@ const Hero = () => {
                             className="text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl md:text-6xl mb-6 leading-[1.1]"
                         >
                             Get Instant, Personalized <br />
-                            <span className="text-[#BADA55] border-b-4 border-[#BADA55]">Homework Help</span>
+                            <span className="text-[#BADA55] border-b-4 border-[#BADA55] inline-flex items-center gap-3">
+                                Homework Help
+                                <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 17.25V21h3.75L17.81 9.94l-3.75-3.75L3 17.25z" stroke="#BADA55" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M20.71 7.04c.39-.39.39-1.02 0-1.41l-2.34-2.34c-.39-.39-1.02-.39-1.41 0l-1.83 1.83 3.75 3.75 1.83-1.83z" stroke="#BADA55" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                                    <path d="M4 20h16" stroke="#BADA55" strokeWidth="1.5" strokeLinecap="round"/>
+                                </svg>
+                            </span>
                         </motion.h1>
 
                         {/* Subheading */}
@@ -72,7 +79,7 @@ const Hero = () => {
                                     type="text"
                                     name="search"
                                     className="block w-full border-0 p-0 placeholder:text-slate-400 focus:ring-0 text-base bg-transparent font-medium truncate"
-                                    placeholder="Ask your question..."
+                                    placeholder="Ask your academic question..."
                                 />
                                 <button type="submit" className="flex items-center gap-2 bg-[rgb(12,81,79)] hover:bg-[rgb(10,65,63)] text-white px-6 h-[42px] rounded-full font-semibold transition-all duration-300 shadow-md shadow-[rgb(12,81,79)]/25 transform hover:scale-[1.02] active:scale-[0.98]">
                                     <Search className="w-4 h-4" />

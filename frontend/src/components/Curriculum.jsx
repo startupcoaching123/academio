@@ -19,7 +19,7 @@ const Curriculum = () => {
     };
 
     return (
-        <section className="py-15 bg-slate-50 overflow-hidden relative selection:bg-teal-100 selection:text-teal-900">
+        <section className="py-10 bg-slate-50 overflow-hidden relative selection:bg-teal-100 selection:text-teal-900">
             {/* Background Decor - Mesh Gradient */}
             <div className="absolute top-0 right-0 -translate-y-1/4 translate-x-1/4 w-[800px] h-[800px] bg-gradient-to-br from-teal-100/40 via-sky-100/40 to-rose-100/40 rounded-full blur-3xl -z-10" />
             <div className="absolute bottom-0 left-0 translate-y-1/4 -translate-x-1/4 w-[600px] h-[600px] bg-gradient-to-tr from-slate-200/40 to-teal-50/40 rounded-full blur-3xl -z-10" />

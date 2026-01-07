@@ -52,10 +52,10 @@ const FEATURES_DATA = [
   },
 ];
 
-const ModernIGCSE = () => {
-  const [selectedClass, setSelectedClass] = useState(10);
+const Ib = () => {
+  const [selectedClass, setSelectedClass] = useState(6);
   const navigate = useNavigate();
-  const classes = [8, 9, 10, 11, 12];
+  const classes = [6, 7, 8, 9, 10, 11, 12];
 
   // --- Animation Variants ---
   const gridContainerVariants = {
@@ -79,7 +79,7 @@ const ModernIGCSE = () => {
       </div>
 
       {/* --- HERO & CLASS SELECTION --- */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-38 pb-12">
         {/* Hero Text */}
         <div className="text-center mb-12">
             <motion.div
@@ -90,7 +90,7 @@ const ModernIGCSE = () => {
               Cambridge International AS & A Level
             </motion.div>
             <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              IGCSE Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
+              IB Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
             </h1>
             <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
               At Academio, we are committed to nurturing young minds and preparing them for academic excellence. Our programs are designed to build a strong foundational knowledge and equip students with the skills and confidence to excel in their exams.
@@ -258,4 +258,4 @@ const ModernIGCSE = () => {
   );
 };
 
-export default ModernIGCSE;
+export default Ib;

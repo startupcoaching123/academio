@@ -76,17 +76,19 @@ const Navbar = () => {
                                 <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[rgb(12,81,79)] transition-all duration-300 group-hover:w-full group-hover:left-0" />
                             </button>
 
-                            {['IB', 'Our Teachers'].map((item) => (
-                                <a
-                                    key={item}
-                                    href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                    onClick={(e) => handleScroll(e, item.toLowerCase().replace(' ', '-'))}
-                                    className="relative text-slate-600 hover:text-[rgb(12,81,79)] px-4 py-2 text-base font-semibold transition-all duration-300 group"
+                            {[
+                                { name: 'IB', path: '/ib-courses' },
+                                { name: 'Our Teachers', path: '/our-teachers' }
+                            ].map((item) => (
+                                <button
+                                    key={item.name}
+                                    onClick={() => handleNavigation(item.path)}
+                                    className="relative text-slate-600 hover:text-[rgb(12,81,79)] px-4 py-2 text-base font-semibold transition-all duration-300 group bg-transparent border-none cursor-pointer"
                                 >
-                                    <span className="relative z-10">{item}</span>
+                                    <span className="relative z-10">{item.name}</span>
                                     <span className="absolute inset-0 bg-[rgb(12,81,79)]/5 rounded-full scale-0 group-hover:scale-100 transition-transform duration-300" />
                                     <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-[rgb(12,81,79)] transition-all duration-300 group-hover:w-full group-hover:left-0" />
-                                </a>
+                                </button>
                             ))}
 
                             {/* Resources Dropdown */}
@@ -108,13 +110,12 @@ const Navbar = () => {
                                         exit={{ opacity: 0, y: -10 }}
                                         className="absolute top-full left-0 mt-2 w-48 bg-white rounded-full shadow-xl border border-[rgb(12,81,79)]/10 overflow-hidden"
                                     >
-                                        <a
-                                            href="#blog"
+                                        <button
+                                            onClick={() => handleNavigation('/blog')}
                                             className="block px-4 py-3 text-slate-600 hover:text-[rgb(12,81,79)] hover:bg-[rgb(12,81,79)]/5 text-base font-semibold transition-all duration-300"
-                                            onClick={(e) => handleScroll(e, 'blog')}
                                         >
                                             Blog
-                                        </a>
+                                        </button>
                                     </motion.div>
                                 )}
                             </div>
@@ -168,27 +169,28 @@ const Navbar = () => {
                             Cambridge
                         </button>
 
-                        {['IB', 'Our Teachers'].map((item) => (
-                            <a
-                                key={item}
-                                href={`#${item.toLowerCase().replace(' ', '-')}`}
-                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10"
-                                onClick={(e) => handleScroll(e, item.toLowerCase().replace(' ', '-'))}
+                        {[
+                            { name: 'IB', path: '/ib-courses' },
+                            { name: 'Our Teachers', path: '/our-teachers' }
+                        ].map((item) => (
+                            <button
+                                key={item.name}
+                                onClick={() => handleNavigation(item.path)}
+                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 w-full text-left bg-transparent border-none cursor-pointer"
                             >
-                                {item}
-                            </a>
+                                {item.name}
+                            </button>
                         ))}
 
                         {/* Mobile Resources Section */}
                         <div className="border-t border-slate-200 pt-3 mt-3">
-                            <div className="text-slate-500 text-sm font-semibold px-4 py-2">Resources</div>
-                            <a
-                                href="#blog"
-                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-2xl hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 ml-4"
-                                onClick={(e) => handleScroll(e, 'blog')}
+                            <div className="text-slate-500 text-sm font-semibold py-2">Resources</div>
+                            <button
+                                onClick={() => handleNavigation('/blog')}
+                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 w-full text-left bg-transparent border-none cursor-pointer"
                             >
                                 Blog
-                            </a>
+                            </button>
                         </div>
 
                         <button 

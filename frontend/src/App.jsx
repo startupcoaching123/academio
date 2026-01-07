@@ -10,7 +10,7 @@ import Footer from './components/Footer';
 import Enroll from './components/Enroll';
 import Lenis from 'lenis';
 import 'lenis/dist/lenis.css';
-import ModernIGCSE from './components/IGCSECourses';
+import ModernIGCSE from './pages/igcse/IGCSECourses';
 import SubjectDetail from './components/SubjectDetail';
 import EnrollmentForm from './components/EnrollmentForm';
 import ScrollToTop from './components/ScrollToTop';
@@ -18,6 +18,8 @@ import WhatsAppButton from './components/WhatsAppButton';
 import Chatbot from './components/Chatbot';
 import FeaturesSection from './components/FeatureSection';
 import OurTeachers from './pages/OurTeachers/OurTeachers';
+import Ib from './pages/ib/Ib';
+import BlogPage from './pages/blog/BlogPage';
 
 const SmoothScrollContext = createContext(null);
 
@@ -103,6 +105,8 @@ function App() {
           </MainLayout>
         } />
         <Route path="/igcse-courses" element={<MainLayout><ModernIGCSE /></MainLayout>} />
+        <Route path="/ib-courses" element={<MainLayout><Ib /></MainLayout>} />
+        <Route path="/blog" element={<MainLayout><BlogPage /></MainLayout>} />
         <Route path="/subject/:subject" element={<MainLayout><SubjectDetail /></MainLayout>} />
         <Route path="/enrollment-form" element={<MainLayout><EnrollmentForm /></MainLayout>} />
         <Route path="/our-teachers" element={<MainLayout><OurTeachers /></MainLayout>} />
