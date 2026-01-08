@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'r
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Testimonials from './components/Testimonials';
+import AboutSection from './components/AboutSection';
 import Questions from './components/Questions';
 import Curriculum from './components/Curriculum';
 import Features from './components/Features';
@@ -20,6 +21,8 @@ import FeaturesSection from './components/FeatureSection';
 import SingleBlogPage from './pages/Blogs/SingleBlogPage';
 import AdminLogin from './pages/Admin/AdminLogin';
 import AdminPanel from './pages/Admin/AdminPanel';
+import ContactUs from './pages/ContactUs';
+import AboutUs from './pages/AboutUs';
 
 // Lazy load pages
 const OurTeachers = React.lazy(() => import('./pages/OurTeachers/OurTeachers'));
@@ -82,13 +85,27 @@ function App() {
 
   useEffect(() => {
     // Scroll to top when route changes
-    if (window.lenis) {
-      window.lenis.scrollTo(0, { immediate: true });
-    } else {
-      window.scrollTo(0, 0);
-      document.documentElement.scrollTop = 0;
-      document.body.scrollTop = 0;
-    }
+    const scrollToTop = () => {
+      if (window.lenis) {
+        window.lenis.scrollTo(0, { immediate: true, duration: 0 });
+      } else {
+        window.scrollTo(0, 0);
+        document.documentElement.scrollTop = 0;
+        document.body.scrollTop = 0;
+      }
+    };
+
+    // Immediate scroll
+    scrollToTop();
+    
+    // Fallback scroll after a short delay to ensure it works
+    const fallbackTimeout = setTimeout(() => {
+      if (window.pageYOffset > 0 || document.documentElement.scrollTop > 0) {
+        scrollToTop();
+      }
+    }, 100);
+
+    return () => clearTimeout(fallbackTimeout);
   }, [location.pathname]);
 
   return (
@@ -101,6 +118,7 @@ function App() {
                 <Hero />
                 <Features />
                 <Testimonials />
+                <AboutSection />
                 <FeaturesSection />
                 <Questions />
                 <Curriculum />
@@ -114,6 +132,8 @@ function App() {
         <Route path="/ib-courses" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><Ib /></React.Suspense></MainLayout>} />
         <Route path="/subject/:subject" element={<MainLayout><SubjectDetail /></MainLayout>} />
         <Route path="/enrollment-form" element={<MainLayout><EnrollmentForm /></MainLayout>} />
+        <Route path="/contact-us" element={<MainLayout><ContactUs /></MainLayout>} />
+        <Route path="/about-us" element={<MainLayout><AboutUs /></MainLayout>} />
         <Route path="/our-teachers" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><OurTeachers /></React.Suspense></MainLayout>} />
 <Route path="/blogs" element={<BlogPage />} />
           <Route path="/blogs/:slug" element={<SingleBlogPage />} />

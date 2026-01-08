@@ -1,22 +1,14 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { 
-  ArrowRight, Atom, FlaskConical, Calculator, 
-  Dna, Monitor, TrendingUp, BookOpen, CheckCircle2, 
+import {
+  ArrowRight, Atom, FlaskConical, Calculator,
+  Dna, Monitor, TrendingUp, BookOpen, CheckCircle2,
   Users, Laptop, FileCheck, BarChart3, X
 } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- DATA: SUBJECTS ---
-const SUBJECTS_DATA = [
-  { id: 1, name: "Physics", icon: <Atom className="w-8 h-8" />, color: "bg-blue-50 text-blue-600" },
-  { id: 2, name: "Chemistry", icon: <FlaskConical className="w-8 h-8" />, color: "bg-purple-50 text-purple-600" },
-  { id: 3, name: "Mathematics (AA)", icon: <Calculator className="w-8 h-8" />, color: "bg-orange-50 text-orange-600" },
-  { id: 4, name: "Mathematics (AI)", icon: <Calculator className="w-8 h-8" />, color: "bg-red-50 text-red-600" },
-  { id: 5, name: "Biology", icon: <Dna className="w-8 h-8" />, color: "bg-green-50 text-green-600" },
-  { id: 6, name: "Computer Science", icon: <Monitor className="w-8 h-8" />, color: "bg-indigo-50 text-indigo-600" },
-  { id: 7, name: "Economics", icon: <TrendingUp className="w-8 h-8" />, color: "bg-amber-50 text-amber-600" },
-];
+import { SUBJECT_DATA } from '../../components/SubjectDetail';
 
 // --- DATA: FEATURES ---
 const FEATURES_DATA = [
@@ -71,7 +63,7 @@ const ModernIGCSE = () => {
 
   return (
     <div className="min-h-screen bg-[#F3F6F8] font-sans selection:bg-teal-200 overflow-x-hidden relative">
-      
+
       {/* Decorative Background Blobs */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
         <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-teal-200/40 rounded-full blur-[100px]" />
@@ -82,19 +74,19 @@ const ModernIGCSE = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-38 pb-12">
         {/* Hero Text */}
         <div className="text-center mb-12">
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-6"
-            >
-              Cambridge International AS & A Level
-            </motion.div>
-            <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
-              IGCSE Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
-            </h1>
-            <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-              At Academio, we are committed to nurturing young minds and preparing them for academic excellence. Our programs are designed to build a strong foundational knowledge and equip students with the skills and confidence to excel in their exams.
-            </p>
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            className="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-6"
+          >
+            IGCSE International AS & A Level
+          </motion.div>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
+            IGCSE Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
+          </h1>
+          <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
+            At Academio, we focus on building strong academic foundations while developing the skills, confidence, and exam readiness students need to excel in the IGCSE curriculum.
+          </p>
         </div>
 
         {/* Class Buttons (Always Visible) */}
@@ -107,17 +99,17 @@ const ModernIGCSE = () => {
               <motion.button
                 key={cls}
                 onClick={() => setSelectedClass(isSelected ? null : cls)} // Toggle
-                animate={{ 
-                    scale: isSelected ? 1.1 : (isInactive ? 0.9 : 1),
-                    opacity: isInactive ? 0.6 : 1
+                animate={{
+                  scale: isSelected ? 1.1 : (isInactive ? 0.9 : 1),
+                  opacity: isInactive ? 0.6 : 1
                 }}
                 whileHover={{ scale: isSelected ? 1.1 : 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className={`group relative flex flex-col items-center justify-center w-20 h-20 md:w-24 md:h-24 rounded-2xl shadow-lg border transition-all duration-300 cursor-pointer
-                    ${isSelected 
-                        ? 'bg-teal-600 border-teal-600 text-white shadow-teal-500/30' 
-                        : 'bg-white border-white text-slate-800 hover:border-teal-200'
-                    }
+                    ${isSelected
+                    ? 'bg-teal-600 border-teal-600 text-white shadow-teal-500/30'
+                    : 'bg-white border-white text-slate-800 hover:border-teal-200'
+                  }
                 `}
               >
                 <span className={`text-sm font-medium mb-1 z-10 transition-colors ${isSelected ? 'text-teal-100' : 'text-slate-400 group-hover:text-teal-600'}`}>Class</span>
@@ -129,70 +121,89 @@ const ModernIGCSE = () => {
 
         {/* --- DYNAMIC SUBJECTS SECTION (Expands Below) --- */}
         <AnimatePresence mode="wait">
-            {selectedClass !== null && (
-                <motion.div
-                    key={selectedClass}
-                    initial={{ opacity: 0, height: 0, y: 20 }}
-                    animate={{ opacity: 1, height: 'auto', y: 0 }}
-                    exit={{ opacity: 0, height: 0, y: -20 }}
-                    transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="overflow-hidden"
-                >
-                    <div className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-white/60 p-8 md:p-12 mb-12 shadow-sm">
-                        <div className="flex items-center justify-between mb-8">
-                             <div>
-                                <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
-                                    Subjects for Class {selectedClass}
-                                    <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
-                                        Cambridge Syllabus
-                                    </span>
-                                </h3>
-                             </div>
-                             <button 
-                                onClick={() => setSelectedClass(null)}
-                                className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500"
-                             >
-                                <X className="w-6 h-6" />
-                             </button>
-                        </div>
+          {selectedClass !== null && (
+            <motion.div
+              key={selectedClass}
+              initial={{ opacity: 0, height: 0, y: 20 }}
+              animate={{ opacity: 1, height: 'auto', y: 0 }}
+              exit={{ opacity: 0, height: 0, y: -20 }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="overflow-hidden"
+            >
+              <div className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-white/60 p-8 md:p-12 mb-12 shadow-sm">
+                <div className="flex items-center justify-between mb-8">
+                  <div>
+                    <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
+                      Subjects for Class {selectedClass}
+                      <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
+                        IGCSE Syllabus
+                      </span>
+                    </h3>
+                  </div>
+                  <button
+                    onClick={() => setSelectedClass(null)}
+                    className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500"
+                  >
+                    <X className="w-6 h-6" />
+                  </button>
+                </div>
 
-                        <motion.div 
-                            variants={gridContainerVariants}
-                            initial="hidden"
-                            animate="visible"
-                            exit="exit"
-                            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                <motion.div
+                  variants={gridContainerVariants}
+                  initial="hidden"
+                  animate="visible"
+                  exit="exit"
+                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+                >
+                  {(() => {
+                    const gradeKey = selectedClass >= 11 ? 'grade11_12_electives' : `grade${selectedClass}`;
+                    const subjects = SUBJECT_DATA[gradeKey];
+
+                    if (!subjects) {
+                      return (
+                        <div className="col-span-full py-12 text-center text-slate-500 bg-white/50 rounded-2xl">
+                          <p>No specific subject data available for Class {selectedClass} yet.</p>
+                        </div>
+                      );
+                    }
+
+                    return Object.entries(subjects).map(([key, subject], index) => {
+                      const subjectSlug = key.replace(/([A-Z])/g, "-$1").toLowerCase(); // e.g. englishFirstLanguage -> english-first-language
+
+                      return (
+                        <motion.div
+                          key={key}
+                          variants={cardVariants}
+                          whileHover={{ y: -5 }}
+                          onClick={() => {
+                            window.scrollTo(0, 0);
+                            navigate(`/subject/${subjectSlug}`, {
+                              state: {
+                                grade: selectedClass,
+                                board: 'IGCSE'
+                              }
+                            });
+                          }}
+                          className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 border border-slate-100 transition-all duration-300 group cursor-pointer"
                         >
-                             {SUBJECTS_DATA.map((subject) => {
-                                const subjectSlug = subject.name.toLowerCase().replace(/\s+/g, '-').replace(/[()]/g, '').replace(/-+/g, '-');
-                                return (
-                                <motion.div
-                                    key={subject.id}
-                                    variants={cardVariants}
-                                    whileHover={{ y: -5 }}
-                                    onClick={() => {
-                                        window.scrollTo(0, 0);
-                                        navigate(`/subject/${subjectSlug}`);
-                                    }}
-                                    className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 border border-slate-100 transition-all duration-300 group cursor-pointer"
-                                >
-                                    <div className="flex items-start justify-between mb-4">
-                                        <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center`}>
-                                            {subject.icon}
-                                        </div>
-                                        <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                                            <ArrowRight className="w-4 h-4 text-slate-600" />
-                                        </div>
-                                    </div>
-                                    <h4 className="text-lg font-bold text-slate-800">{subject.name}</h4>
-                                    <p className="text-sm text-slate-400 mt-1">View Syllabus details</p>
-                                </motion.div>
-                                );
-                             })}
+                          <div className="flex items-start justify-between mb-4">
+                            <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center`}>
+                              {subject.icon}
+                            </div>
+                            <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+                              <ArrowRight className="w-4 h-4 text-slate-600" />
+                            </div>
+                          </div>
+                          <h4 className="text-lg font-bold text-slate-800">{subject.name}</h4>
+                          <p className="text-sm text-slate-400 mt-1">View Syllabus details</p>
                         </motion.div>
-                    </div>
+                      );
+                    });
+                  })()}
                 </motion.div>
-            )}
+              </div>
+            </motion.div>
+          )}
         </AnimatePresence>
 
       </div>
@@ -202,7 +213,7 @@ const ModernIGCSE = () => {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-5xl font-extrabold text-slate-900 mb-6">What's Included</h2>
-            <div className="h-1.5 w-24 bg-teal-500 mx-auto rounded-full"/>
+            <div className="h-1.5 w-24 bg-teal-500 mx-auto rounded-full" />
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -216,12 +227,12 @@ const ModernIGCSE = () => {
                 whileHover={{ y: -10 }}
                 className="border-2 border-slate-100 rounded-3xl p-8 hover:border-teal-400/50 hover:shadow-2xl hover:shadow-teal-900/5 transition-all duration-300 bg-white flex flex-col h-full"
               >
-                <div className="mb-6">
+                <div className="flex flex-col items-center mb-6">
+                  <img src={feature.img} alt={feature.title} className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity" />
+                </div>
+                <div className="text-center">
                   <h3 className="text-xl font-bold text-slate-900 mb-3">{feature.title}</h3>
                   <p className="text-slate-500 leading-relaxed text-sm">{feature.desc}</p>
-                </div>
-                <div className="mt-auto pt-6 flex flex-col items-center">
-                   <img src={feature.img} alt={feature.title} className="h-32 object-contain opacity-90 hover:opacity-100 transition-opacity"/>
                 </div>
               </motion.div>
             ))}
@@ -231,27 +242,28 @@ const ModernIGCSE = () => {
 
       {/* --- BOTTOM CTA --- */}
       <div className="bg-linear-to-r from-teal-600 to-emerald-500 py-24 px-6 relative z-10 text-center">
-         <motion.div
-           initial={{ opacity: 0, scale: 0.9 }}
-           whileInView={{ opacity: 1, scale: 1 }}
-           viewport={{ once: true }}
-           transition={{ duration: 0.5 }}
-           className="max-w-4xl mx-auto"
-         >
-            <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-sm">
-              Unlock Your Child's Potential Today
-            </h2>
-            <p className="text-teal-50 text-lg md:text-xl mb-10 font-medium max-w-2xl mx-auto">
-              Sign up for a free consultation or trial class and give your child the academic advantage they deserve.
-            </p>
-            <motion.button 
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              className="bg-white text-teal-800 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
-            >
-              Book Free Consultation
-            </motion.button>
-         </motion.div>
+        <motion.div
+          initial={{ opacity: 0, scale: 0.9 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
+          <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-sm">
+            Unlock Your Child's Potential Today
+          </h2>
+          <p className="text-teal-50 text-lg md:text-xl mb-10 font-medium max-w-2xl mx-auto">
+            Sign up for a free consultation or trial class and give your child the academic advantage they deserve.
+          </p>
+          <motion.button
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+            onClick={() => navigate('/enrollment-form')}
+            className="bg-white text-teal-800 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
+          >
+            Book Free Consultation
+          </motion.button>
+        </motion.div>
       </div>
 
     </div>

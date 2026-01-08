@@ -105,17 +105,64 @@ const Navbar = () => {
 
                                 {isDropdownOpen && (
                                     <motion.div
-                                        initial={{ opacity: 0, y: -10 }}
-                                        animate={{ opacity: 1, y: 0 }}
-                                        exit={{ opacity: 0, y: -10 }}
-                                        className="absolute top-full left-0 mt-2 w-48 bg-white rounded-full shadow-xl border border-[rgb(12,81,79)]/10 overflow-hidden"
+                                        initial={{ opacity: 0, y: -10, scale: 0.95 }}
+                                        animate={{ opacity: 1, y: 0, scale: 1 }}
+                                        exit={{ opacity: 0, y: -10, scale: 0.95 }}
+                                        transition={{ duration: 0.2, ease: "easeOut" }}
+                                        className="absolute top-full left-1/2 transform -translate-x-1/2 mt-3 w-56 bg-white/95 backdrop-blur-xl rounded-2xl shadow-2xl border border-[rgb(12,81,79)]/10 overflow-hidden"
                                     >
-                                        <button
-                                            onClick={() => handleNavigation('/blog')}
-                                            className="block px-4 py-3 text-slate-600 hover:text-[rgb(12,81,79)] hover:bg-[rgb(12,81,79)]/5 text-base font-semibold transition-all duration-300"
-                                        >
-                                            Blog
-                                        </button>
+                                        <div className="p-1">
+                                            <div className="relative">
+                                                {/* Decorative top border */}
+                                                <div className="absolute top-0 left-4 right-4 h-0.5 bg-gradient-to-r from-transparent via-[rgb(12,81,79)]/20 to-transparent" />
+                                                
+                                                <button
+                                                    onClick={() => handleNavigation('/about-us')}
+                                                    className="group w-full flex items-center gap-3 px-4 py-3.5 text-slate-600 hover:text-[rgb(12,81,79)] hover:bg-gradient-to-r hover:from-[rgb(12,81,79)]/5 hover:to-transparent text-base font-semibold transition-all duration-300 rounded-xl relative overflow-hidden"
+                                                >
+                                                    <div className="w-2 h-2 bg-[rgb(12,81,79)]/40 rounded-full group-hover:bg-[rgb(12,81,79)]/60 transition-colors duration-300" />
+                                                    <span>About Us</span>
+                                                    <div className="ml-auto">
+                                                        <svg className="w-4 h-4 text-[rgb(12,81,79)]/40 group-hover:text-[rgb(12,81,79)]/60 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                                        </svg>
+                                                    </div>
+                                                </button>
+                                                
+                                                <div className="h-px bg-gradient-to-r from-transparent via-slate-200/50 to-transparent my-1" />
+                                                
+                                                <button
+                                                    onClick={() => handleNavigation('/blogs')}
+                                                    className="group w-full flex items-center gap-3 px-4 py-3.5 text-slate-600 hover:text-[rgb(12,81,79)] hover:bg-gradient-to-r hover:from-[rgb(12,81,79)]/5 hover:to-transparent text-base font-semibold transition-all duration-300 rounded-xl relative overflow-hidden"
+                                                >
+                                                    <div className="w-2 h-2 bg-[rgb(12,81,79)]/40 rounded-full group-hover:bg-[rgb(12,81,79)]/60 transition-colors duration-300" />
+                                                    <span>Blog</span>
+                                                    <div className="ml-auto">
+                                                        <svg className="w-4 h-4 text-[rgb(12,81,79)]/40 group-hover:text-[rgb(12,81,79)]/60 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                                        </svg>
+                                                    </div>
+                                                </button>
+                                                
+                                                <div className="h-px bg-gradient-to-r from-transparent via-slate-200/50 to-transparent my-1" />
+                                                
+                                                <button
+                                                    onClick={() => handleNavigation('/contact-us')}
+                                                    className="group w-full flex items-center gap-3 px-4 py-3.5 text-slate-600 hover:text-[rgb(12,81,79)] hover:bg-gradient-to-r hover:from-[rgb(12,81,79)]/5 hover:to-transparent text-base font-semibold transition-all duration-300 rounded-xl relative overflow-hidden"
+                                                >
+                                                    <div className="w-2 h-2 bg-[rgb(12,81,79)]/40 rounded-full group-hover:bg-[rgb(12,81,79)]/60 transition-colors duration-300" />
+                                                    <span>Contact Us</span>
+                                                    <div className="ml-auto">
+                                                        <svg className="w-4 h-4 text-[rgb(12,81,79)]/40 group-hover:text-[rgb(12,81,79)]/60 transition-colors duration-300" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                                                            <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                                                        </svg>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        
+                                        {/* Dropdown arrow */}
+                                        <div className="absolute -top-2 left-1/2 transform -translate-x-1/2 w-4 h-4 bg-white/95 backdrop-blur-xl rotate-45 border-l border-t border-[rgb(12,81,79)]/10" />
                                     </motion.div>
                                 )}
                             </div>
@@ -186,10 +233,22 @@ const Navbar = () => {
                         <div className="border-t border-slate-200 pt-3 mt-3">
                             <div className="text-slate-500 text-sm font-semibold py-2">Resources</div>
                             <button
+                                onClick={() => handleNavigation('/about-us')}
+                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 w-full text-left bg-transparent border-none cursor-pointer"
+                            >
+                                About Us
+                            </button>
+                            <button
                                 onClick={() => handleNavigation('/blog')}
                                 className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 w-full text-left bg-transparent border-none cursor-pointer"
                             >
                                 Blog
+                            </button>
+                            <button
+                                onClick={() => handleNavigation('/contact-us')}
+                                className="text-slate-600 hover:text-[rgb(12,81,79)] block px-4 py-3 rounded-full hover:bg-[rgb(12,81,79)]/5 text-base font-bold transition-all duration-300 border border-transparent hover:border-[rgb(12,81,79)]/10 w-full text-left bg-transparent border-none cursor-pointer"
+                            >
+                                Contact Us
                             </button>
                         </div>
 

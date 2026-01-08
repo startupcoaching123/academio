@@ -62,7 +62,7 @@ const FeaturesSection = () => {
                 <FeatureCard 
                     index={1}
                     title="Tutor-led sessions."
-                    img="https://images.unsplash.com/photo-1577891729319-f20387b37060?w=400&q=80"
+                    img="https://www.dell.org/wp-content/uploads/2024/05/india-schools-featured-v2.webp"
                     className="h-40 md:h-full"
                 />
                 <FeatureCard 

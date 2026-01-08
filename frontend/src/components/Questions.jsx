@@ -1,42 +1,42 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FlaskConical, HelpCircle, Globe2, Calculator, Quote, Mic, ArrowRight } from 'lucide-react';
+import { FlaskConical, HelpCircle, Globe2, Calculator, Quote, Mic, ArrowRight, Users, TrendingUp, Award } from 'lucide-react';
 
 const questions = [
     {
-        icon: <FlaskConical className="h-8 w-8 text-blue-500" />,
-        title: "Teach me about",
-        highlight: "Enzymes in Biology",
+        icon: <HelpCircle className="h-8 w-8 text-blue-500" />,
+        title: "Do you support both",
+        highlight: "IGCSE and IB curricula?",
         bg: "bg-blue-50"
     },
     {
-        icon: <HelpCircle className="h-8 w-8 text-red-400" />,
-        title: "How to structure",
-        highlight: "a TOK essay on ethics?",
+        icon: <Globe2 className="h-8 w-8 text-red-400" />,
+        title: "Which grades and subjects",
+        highlight: "does Academio cover?",
         bg: "bg-red-50"
     },
     {
-        icon: <Globe2 className="h-8 w-8 text-indigo-500" />,
-        title: "How is Globalization",
-        highlight: "covered in IGCSE History?",
+        icon: <Users className="h-8 w-8 text-indigo-500" />,
+        title: "Are sessions",
+        highlight: "one-to-one or small group based?",
         bg: "bg-indigo-50"
     },
     {
-        icon: <Calculator className="h-8 w-8 text-teal-500" />,
-        title: "Steps to find vertex",
-        highlight: "of a parabola?",
+        icon: <TrendingUp className="h-8 w-8 text-teal-500" />,
+        title: "How do you help students improve",
+        highlight: "grades and exam performance?",
         bg: "bg-teal-50"
     },
     {
-        icon: <Quote className="h-8 w-8 text-cyan-500" />,
-        title: "How to use Active",
-        highlight: "& Passive voice in ...",
+        icon: <Mic className="h-8 w-8 text-cyan-500" />,
+        title: "Can students get instant",
+        highlight: "doubt-solving support outside class hours?",
         bg: "bg-cyan-50"
     },
     {
-        icon: <Mic className="h-8 w-8 text-orange-400" />,
-        title: "Can you explain",
-        highlight: "Newton's Laws of Motion?",
+        icon: <Award className="h-8 w-8 text-orange-400" />,
+        title: "Are your mentors experienced with",
+        highlight: "IGCSE & IB exam patterns?",
         bg: "bg-orange-50"
     }
 ];
@@ -48,7 +48,7 @@ const Questions = () => {
                 <div className="text-center mb-16">
                     <span className="text-teal-600 font-bold tracking-wider text-sm uppercase mb-2 block">Common Queries</span>
                     <h2 className="text-3xl font-bold text-[rgb(12,81,79)] sm:text-4xl font-display">
-                        Some Questions You Can Ask Us Anytime
+                        Questions You Can Ask Us Anytime
                     </h2>
                 </div>
 

@@ -94,8 +94,6 @@ const EnrollmentForm = () => {
                 <School className="absolute left-4 top-1/2 -translate-y-1/2 text-slate-400 group-focus-within:text-teal-600 transition-colors" size={18} />
                 <select className="w-full pl-12 pr-10 py-3.5 bg-slate-50 border border-slate-200 rounded-xl focus:bg-white focus:ring-2 focus:ring-teal-100 focus:border-teal-600 outline-none transition-all appearance-none text-slate-700 cursor-pointer">
                   <option value="" disabled selected>Select Board</option>
-                  <option value="cbse">CBSE</option>
-                  <option value="icse">ICSE</option>
                   <option value="ib">IB</option>
                   <option value="igcse">IGCSE</option>
                 </select>

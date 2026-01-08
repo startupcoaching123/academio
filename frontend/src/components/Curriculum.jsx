@@ -37,16 +37,16 @@ const Curriculum = () => {
                     >
                         <motion.div variants={itemVariants}>
                             <span className="px-4 py-1.5 rounded-full bg-teal-100 text-teal-800 text-sm font-semibold tracking-wide uppercase inline-block mb-4">
-                                World-Class Education
+                                World-Class Learning for Global Curricula
                             </span>
                             <h2 className="text-4xl md:text-5xl font-bold text-slate-900 font-display mb-6 leading-tight">
-                                Navigating <br />
+                                Confidently <br />
                                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-teal-600 to-sky-600">
-                                    IGCSE & IB Curriculum
+                                    Navigating the IGCSE & IB Journey
                                 </span>
                             </h2>
                             <p className="text-lg text-slate-600 mb-10 leading-relaxed max-w-lg">
-                                We decode the complexity of international boards. Personalized learning paths designed to help students excel in Cambridge and IB programs.
+                                We simplify the complexity of international boards through personalised learning pathways that help students excel in Cambridge and IB programmes.
                             </p>
                         </motion.div>
 
