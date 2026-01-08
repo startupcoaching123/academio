@@ -1,5 +1,5 @@
 import React, { createContext, useEffect, useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, Navigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Testimonials from './components/Testimonials';
@@ -17,10 +17,13 @@ import ScrollToTop from './components/ScrollToTop';
 import WhatsAppButton from './components/WhatsAppButton';
 import Chatbot from './components/Chatbot';
 import FeaturesSection from './components/FeatureSection';
+import SingleBlogPage from './pages/Blogs/SingleBlogPage';
+import AdminLogin from './pages/Admin/AdminLogin';
+import AdminPanel from './pages/Admin/AdminPanel';
 
 // Lazy load pages
 const OurTeachers = React.lazy(() => import('./pages/OurTeachers/OurTeachers'));
-const BlogPage = React.lazy(() => import('./pages/blog/BlogPage'));
+const BlogPage = React.lazy(() => import('./pages/Blogs/Blogs'));
 const Ib = React.lazy(() => import('./pages/ib/Ib'));
 
 const SmoothScrollContext = createContext(null);
@@ -112,7 +115,22 @@ function App() {
         <Route path="/subject/:subject" element={<MainLayout><SubjectDetail /></MainLayout>} />
         <Route path="/enrollment-form" element={<MainLayout><EnrollmentForm /></MainLayout>} />
         <Route path="/our-teachers" element={<MainLayout><React.Suspense fallback={<div>Loading...</div>}><OurTeachers /></React.Suspense></MainLayout>} />
-
+<Route path="/blogs" element={<BlogPage />} />
+          <Route path="/blogs/:slug" element={<SingleBlogPage />} />
+          <Route path="/admin/login" element={<AdminLogin />} />
+          <Route
+            path="/admin"
+            element={
+              <ProtectedRoute>
+                <AdminPanel />
+              </ProtectedRoute>
+            }
+          >
+            <Route path="dashboard" element={<AdminPanel />} />
+            <Route path="blogs" element={<AdminPanel />} />
+            <Route path="users" element={<AdminPanel />} />
+            <Route path="settings" element={<AdminPanel />} />
+          </Route>
         {/* Chatbot Route - With Navbar, No Footer */}
         <Route path="/chatbot" element={
           <GlobalScrollProvider>
@@ -120,9 +138,19 @@ function App() {
             <Chatbot />
           </GlobalScrollProvider>
         } />
+        
       </Routes>
     </GlobalScrollProvider>
   );
+}
+function ProtectedRoute({ children }) {
+  const token = localStorage.getItem("token");
+
+  if (!token) {
+    return <Navigate to="/admin/login" replace />;
+  }
+
+  return children;
 }
 
 export default App;
