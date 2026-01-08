@@ -19,7 +19,7 @@ const Hero = () => {
         }
     }
     return (
-        <div id="home" className="relative pt-30 pb-5 lg:pt-35 lg:pb-15 overflow-hidden bg-gradient-to-r from-green-50 via-white to-white">
+        <div id="home" className="relative pt-27 pb-5 lg:pt-35 lg:pb-15 overflow-hidden bg-gradient-to-r from-green-50 via-white to-white">
             {/* --- Background Elements (Softened to match image style) --- */}
             {/* Subtle Grid - lowered opacity for cleaner look */}
             <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-60"></div>
@@ -40,7 +40,7 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.5, delay: 0.1 }}
-                            className="text-[2.8rem] font-bold tracking-tight text-slate-900 sm:text-[3rem] md:text-[3.2rem] mb-6 leading-[1.1]"
+                            className="text-[2.5rem] font-bold tracking-tight text-slate-900 sm:text-[3rem] md:text-[3.2rem] mb-6 leading-[1.1]"
                         >
                             Cultivating Intellectually <br />
                             <span className="text-[#BADA55] border-b-4 border-[#BADA55] inline-flex items-center gap-3">

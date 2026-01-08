@@ -95,6 +95,9 @@ const CardItem = ({ icon: Icon, color, title, desc }) => {
     return (
         <motion.div
             variants={{ hidden: { opacity: 0, y: 10 }, visible: { opacity: 1, y: 0 } }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
             whileHover={{ y: -4, boxShadow: "0 10px 30px -10px rgba(0,0,0,0.1)" }}
             className="group flex p-5 bg-white/80 backdrop-blur-sm rounded-2xl border border-white shadow-sm hover:border-slate-200 transition-all cursor-pointer relative overflow-hidden"
         >
@@ -164,7 +167,8 @@ const CompositionVisual = () => {
                                 <motion.div
                                     initial={{ width: 0 }}
                                     whileInView={{ width: '92%' }}
-                                    transition={{ duration: 1.5, delay: 0.5 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.5, delay: 0.5, ease: "easeOut" }}
                                     className="h-full bg-teal-500 rounded-full"
                                 />
                             </div>
@@ -178,7 +182,8 @@ const CompositionVisual = () => {
                                 <motion.div
                                     initial={{ width: 0 }}
                                     whileInView={{ width: '88%' }}
-                                    transition={{ duration: 1.5, delay: 0.7 }}
+                                    viewport={{ once: true }}
+                                    transition={{ duration: 1.5, delay: 0.7, ease: "easeOut" }}
                                     className="h-full bg-sky-500 rounded-full"
                                 />
                             </div>
@@ -205,9 +210,11 @@ const CompositionVisual = () => {
 
             {/* Floating Element 1: Success Badge */}
             <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-                className="absolute -right-8 top-20 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-20"
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: -10 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8 }}
+                className="absolute -right-8 top-20 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-20 hidden lg:block"
             >
                 <div className="flex items-center gap-3">
                     <div className="bg-green-100 p-2 rounded-full">
@@ -222,9 +229,11 @@ const CompositionVisual = () => {
 
             {/* Floating Element 2: Stats */}
             <motion.div
-                animate={{ y: [0, 15, 0] }}
-                transition={{ duration: 5, repeat: Infinity, delay: 1, ease: "easeInOut" }}
-                className="absolute -left-6 bottom-32 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-20"
+                initial={{ opacity: 0, y: 0 }}
+                whileInView={{ opacity: 1, y: 15 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="absolute -left-6 bottom-32 bg-white p-4 rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-slate-100 z-20 hidden lg:block"
             >
                 <div className="flex items-center gap-3">
                     <div className="bg-amber-100 p-2 rounded-full">
