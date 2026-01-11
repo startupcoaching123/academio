@@ -1003,6 +1003,395 @@ export const IB_SUBJECT_DATA = {
         }
       ]
     }
+  },
+
+  grade12: {
+    mathematics: {
+      name: "IB DP Mathematics: Analysis & Approaches – Class 12",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB DP Mathematics: Analysis & Approaches – Class 12 completes the DP with advanced calculus, mathematical proof, and exam preparation.",
+      topics: [
+        {
+          title: "Advanced Calculus",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced calculus",
+            "Trigonometric applications",
+            "Mathematical proof and reasoning"
+          ]
+        },
+        {
+          title: "Probability and Statistics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Probability distributions",
+            "Statistical inference",
+            "Advanced data analysis"
+          ]
+        },
+        {
+          title: "Mathematical Applications",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Mathematical modelling",
+            "Problem-solving techniques",
+            "Exam preparation strategies"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced mathematical reasoning",
+            "Analytical thinking",
+            "Problem-solving expertise"
+          ]
+        }
+      ]
+    },
+
+    mathematicsAI: {
+      name: "IB DP Mathematics: Applications & Interpretation – Class 12",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-teal-50 text-teal-600",
+      description: "IB DP Mathematics: Applications & Interpretation – Class 12 focuses on real-world applications and data-driven problem solving.",
+      topics: [
+        {
+          title: "Advanced Modelling",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced modelling techniques",
+            "Statistical inference",
+            "Financial and real-world mathematics"
+          ]
+        },
+        {
+          title: "Data Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Data-driven problem solving",
+            "Statistical applications",
+            "Mathematical technology"
+          ]
+        },
+        {
+          title: "Applied Mathematics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Real-world applications",
+            "Mathematical investigation",
+            "Project work"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Applied mathematical thinking",
+            "Data analysis skills",
+            "Problem-solving in context"
+          ]
+        }
+      ]
+    },
+
+    physics: {
+      name: "IB DP Physics – Class 12",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB DP Physics – Class 12 completes DP Physics with advanced topics and experimental analysis.",
+      topics: [
+        {
+          title: "Advanced Mechanics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Circular motion and gravitation",
+            "Advanced mechanics applications",
+            "Energy and momentum"
+          ]
+        },
+        {
+          title: "Fields and Electromagnetism",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Electric and magnetic fields",
+            "Electromagnetic induction",
+            "Field applications"
+          ]
+        },
+        {
+          title: "Modern Physics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Nuclear and quantum physics",
+            "Atomic structure",
+            "Particle physics"
+          ]
+        },
+        {
+          title: "Experimental Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced experimental analysis",
+            "Data processing",
+            "Uncertainty analysis"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced problem-solving",
+            "Experimental expertise",
+            "Scientific reasoning"
+          ]
+        }
+      ]
+    },
+
+    chemistry: {
+      name: "IB DP Chemistry – Class 12",
+      icon: <FlaskConical className="w-8 h-8" />,
+      color: "bg-purple-50 text-purple-600",
+      description: "IB DP Chemistry – Class 12 completes DP Chemistry with advanced topics and analytical techniques.",
+      topics: [
+        {
+          title: "Physical Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Chemical equilibrium",
+            "Electrochemistry",
+            "Advanced thermodynamics"
+          ]
+        },
+        {
+          title: "Organic Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced organic chemistry",
+            "Reaction mechanisms",
+            "Synthesis pathways"
+          ]
+        },
+        {
+          title: "Analytical Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Analytical techniques",
+            "Spectroscopy",
+            "Chromatography"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced laboratory skills",
+            "Chemical analysis",
+            "Scientific investigation"
+          ]
+        }
+      ]
+    },
+
+    biology: {
+      name: "IB DP Biology – Class 12",
+      icon: <Dna className="w-8 h-8" />,
+      color: "bg-green-50 text-green-600",
+      description: "IB DP Biology – Class 12 completes DP Biology with advanced topics and data-based evaluation.",
+      topics: [
+        {
+          title: "Advanced Genetics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Genetics and evolution",
+            "Population genetics",
+            "Evolutionary mechanisms"
+          ]
+        },
+        {
+          title: "Human Physiology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Human physiology",
+            "Advanced body systems",
+            "Homeostasis"
+          ]
+        },
+        {
+          title: "Ecology and Environment",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Ecology and sustainability",
+            "Conservation biology",
+            "Environmental impact"
+          ]
+        },
+        {
+          title: "Data-Based Evaluation",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Data-based scientific evaluation",
+            "Statistical analysis in biology",
+            "Research methodology"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced biological analysis",
+            "Research skills",
+            "Scientific communication"
+          ]
+        }
+      ]
+    },
+
+    economics: {
+      name: "IB DP Economics – Class 12",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "bg-orange-50 text-orange-600",
+      description: "IB DP Economics – Class 12 completes DP Economics with macroeconomic theory and policy evaluation.",
+      topics: [
+        {
+          title: "Macroeconomic Theory",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Macroeconomic theory",
+            "Economic models",
+            "Policy analysis"
+          ]
+        },
+        {
+          title: "International Economics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "International trade",
+            "Exchange rates",
+            "Balance of payments"
+          ]
+        },
+        {
+          title: "Development Economics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Development economics",
+            "Growth strategies",
+            "Economic development indicators"
+          ]
+        },
+        {
+          title: "Policy Evaluation",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Policy evaluation and case studies",
+            "Economic policy analysis",
+            "Real-world applications"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Economic analysis",
+            "Policy evaluation",
+            "Critical thinking"
+          ]
+        }
+      ]
+    },
+
+    computerScience: {
+      name: "IB DP Computer Science – Class 12",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "bg-violet-50 text-violet-600",
+      description: "IB DP Computer Science – Class 12 completes DP Computer Science with advanced programming and system design.",
+      topics: [
+        {
+          title: "Advanced Programming",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Data structures and algorithms",
+            "Advanced programming concepts",
+            "Software development"
+          ]
+        },
+        {
+          title: "System Design",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Databases and system design",
+            "Network systems",
+            "Computational problem solving"
+          ]
+        },
+        {
+          title: "Computational Thinking",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced computational thinking",
+            "Algorithm optimization",
+            "System analysis"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced programming skills",
+            "System design expertise",
+            "Computational problem-solving"
+          ]
+        }
+      ]
+    },
+
+    ibCore: {
+      name: "IB DP Core – Class 12 Completion",
+      icon: <BookOpen className="w-8 h-8" />,
+      color: "bg-amber-50 text-amber-600",
+      description: "IB DP Core – Class 12 completes the core requirements with essay submission and assessment refinement.",
+      topics: [
+        {
+          title: "Theory of Knowledge (TOK)",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Essay and exhibition completion",
+            "Knowledge questions exploration",
+            "Critical reflection on knowledge"
+          ]
+        },
+        {
+          title: "Extended Essay (EE)",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Research writing and final submission",
+            "Academic research skills",
+            "Independent investigation"
+          ]
+        },
+        {
+          title: "Internal Assessments (IA)",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Completion and refinement",
+            "Subject-specific investigations",
+            "Assessment criteria mastery"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Academic research skills",
+            "Critical thinking",
+            "Independent learning"
+          ]
+        }
+      ]
+    }
   }
 };
 
@@ -2540,6 +2929,10 @@ const SubjectDetail = () => {
 
       // Mathematics
       if (s.includes('mathematics') || s === 'math') {
+        // For Class 12, check if it's Applications & Interpretation
+        if (g === 12 && (s.includes('applications') || s.includes('interpretation') || s.includes('ai'))) {
+          return gradeData.mathematicsAI;
+        }
         return gradeData.mathematics;
       }
 
@@ -2575,6 +2968,11 @@ const SubjectDetail = () => {
         return gradeData.furtherMathematics;
       }
 
+      // IB Core
+      if (s.includes('core') || s.includes('tok') || s.includes('ee') || s.includes('ia')) {
+        return gradeData.ibCore;
+      }
+
       // Direct key match (camelCase mapping attempt)
       // e.g. "business-studies" -> "businessStudies"
       const camelCase = s.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
@@ -2595,18 +2993,26 @@ const SubjectDetail = () => {
 
         const s = slug.toLowerCase();
         // Quick checks for common subjects
-        if ((s.includes('math') && data.mathematics) ||
+        if ((s.includes('math') && (data.mathematics || data.mathematicsAI)) ||
           (s === 'english' && (data.english || data.englishFirstLanguage)) ||
           (['physics', 'chemistry', 'biology'].includes(s) && (data[s] || data.science)) ||
           (s.includes('economics') && data.economics) ||
-          (s.includes('further') && s.includes('math') && data.furtherMathematics)
+          (s.includes('further') && s.includes('math') && data.furtherMathematics) ||
+          ((s.includes('core') || s.includes('tok') || s.includes('ee') || s.includes('ia')) && data.ibCore)
         ) {
-          // Return the specific match
-          if (s.includes('math')) return data.mathematics;
+          // Return specific match
+          if (s.includes('math')) {
+            // For Class 12, check if it's Applications & Interpretation
+            if (key === 'grade12' && (s.includes('applications') || s.includes('interpretation') || s.includes('ai'))) {
+              return data.mathematicsAI;
+            }
+            return data.mathematics;
+          }
           if (s === 'english') return data.english || data.englishFirstLanguage;
           if (['physics', 'chemistry', 'biology'].includes(s)) return data[s] || data.science;
           if (s.includes('economics')) return data.economics;
           if (s.includes('further') && s.includes('math')) return data.furtherMathematics;
+          if (s.includes('core') || s.includes('tok') || s.includes('ee') || s.includes('ia')) return data.ibCore;
         }
 
         const camelCase = s.replace(/-([a-z])/g, (g) => g[1].toUpperCase());

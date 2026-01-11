@@ -5,38 +5,38 @@ import { FlaskConical, HelpCircle, Globe2, Calculator, Quote, Mic, ArrowRight, U
 const questions = [
     {
         icon: <HelpCircle className="h-8 w-8 text-blue-500" />,
-        title: "Do you support both",
-        highlight: "IGCSE and IB curricula?",
+        title: "Do You Support Both",
+        highlight: "IGCSE And IB Curricula?",
         bg: "bg-blue-50"
     },
     {
         icon: <Globe2 className="h-8 w-8 text-red-400" />,
-        title: "Which grades and subjects",
-        highlight: "does Academio cover?",
+        title: "Which Grades And Subjects",
+        highlight: "Does Academio Cover?",
         bg: "bg-red-50"
     },
     {
         icon: <Users className="h-8 w-8 text-indigo-500" />,
-        title: "Are sessions",
-        highlight: "one-to-one or small group based?",
+        title: "Are Sessions",
+        highlight: "One-To-One Or Small Group Based?",
         bg: "bg-indigo-50"
     },
     {
         icon: <TrendingUp className="h-8 w-8 text-teal-500" />,
-        title: "How do you help students improve",
-        highlight: "grades and exam performance?",
+        title: "How Do You Help Students Improve",
+        highlight: "Grades And Exam Performance?",
         bg: "bg-teal-50"
     },
     {
         icon: <Mic className="h-8 w-8 text-cyan-500" />,
-        title: "Can students get instant",
-        highlight: "doubt-solving support outside class hours?",
+        title: "Can Students Get Instant",
+        highlight: "Doubt-Solving Support Outside Class Hours?",
         bg: "bg-cyan-50"
     },
     {
         icon: <Award className="h-8 w-8 text-orange-400" />,
-        title: "Are your mentors experienced with",
-        highlight: "IGCSE & IB exam patterns?",
+        title: "Are Your Mentors Experienced With",
+        highlight: "IGCSE & IB Exam Patterns?",
         bg: "bg-orange-50"
     }
 ];

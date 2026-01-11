@@ -47,7 +47,7 @@ const FEATURES_DATA = [
 const Ib = () => {
   const [selectedClass, setSelectedClass] = useState(6);
   const navigate = useNavigate();
-  const classes = [6, 7, 8, 9, 10, 11]; // IB MYP (6-10) and IB DP (11)
+  const classes = [6, 7, 8, 9, 10, 11, 12]; // IB MYP (6-10) and IB DP (11-12)
 
   // --- Animation Variants ---
   const gridContainerVariants = {
@@ -80,13 +80,13 @@ const Ib = () => {
             className="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-6"
           >
             Cambridge International AS & A Level
-            IB Middle Years Programme (MYP)
+            IB Middle Years Programme (MYP) & Diploma Programme (DP)
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
             IB Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
           </h1>
           <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-            IB Class 6-8 follows the IB Middle Years Programme (MYP) and focuses on concept-based, inquiry-driven learning. The curriculum helps students develop critical thinking, communication skills, and real-world understanding, laying a strong foundation for higher IB and international programmes.
+            IB Class 6-8 follows the IB Middle Years Programme (MYP) and focuses on concept-based, inquiry-driven learning. Classes 9-10 continue with advanced MYP preparation, while Classes 11-12 follow the IB Diploma Programme (DP) with subject specialization and university preparation. The curriculum helps students develop critical thinking, communication skills, and real-world understanding, laying a strong foundation for higher education.
           </p>
         </div>
 
