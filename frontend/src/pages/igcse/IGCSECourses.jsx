@@ -136,7 +136,7 @@ const ModernIGCSE = () => {
                     <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
                       Subjects for Class {selectedClass}
                       <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
-                        IGCSE Syllabus
+                        {selectedClass >= 11 ? (selectedClass >= 12 ? 'A Level Syllabus' : 'AS Level Syllabus') : 'IGCSE Syllabus'}
                       </span>
                     </h3>
                   </div>
@@ -156,7 +156,7 @@ const ModernIGCSE = () => {
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 >
                   {(() => {
-                    const gradeKey = selectedClass >= 11 ? 'grade11_12_electives' : `grade${selectedClass}`;
+                    const gradeKey = selectedClass >= 12 ? 'grade12' : selectedClass >= 11 ? 'grade11' : `grade${selectedClass}`;
                     const subjects = SUBJECT_DATA[gradeKey];
 
                     if (!subjects) {

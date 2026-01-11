@@ -8,7 +8,7 @@ import {
 import { motion, AnimatePresence } from 'framer-motion';
 
 // --- DATA: SUBJECTS ---
-import { SUBJECT_DATA } from '../../components/SubjectDetail';
+import { IB_SUBJECT_DATA } from '../../components/SubjectDetail';
 
 // --- DATA: FEATURES ---
 const FEATURES_DATA = [
@@ -47,7 +47,7 @@ const FEATURES_DATA = [
 const Ib = () => {
   const [selectedClass, setSelectedClass] = useState(6);
   const navigate = useNavigate();
-  const classes = [6, 7, 8, 9, 10, 11, 12];
+  const classes = [6, 7, 8]; // IB MYP focuses on grades 6-8
 
   // --- Animation Variants ---
   const gridContainerVariants = {
@@ -80,12 +80,13 @@ const Ib = () => {
             className="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-6"
           >
             Cambridge International AS & A Level
+            IB Middle Years Programme (MYP)
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
             IB Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
           </h1>
           <p className="text-lg text-slate-500 max-w-3xl mx-auto leading-relaxed">
-            At Academio, we are committed to nurturing young minds and preparing them for academic excellence. Our programs are designed to build a strong foundational knowledge and equip students with the skills and confidence to excel in their exams.
+            IB Class 6-8 follows the IB Middle Years Programme (MYP) and focuses on concept-based, inquiry-driven learning. The curriculum helps students develop critical thinking, communication skills, and real-world understanding, laying a strong foundation for higher IB and international programmes.
           </p>
         </div>
 
@@ -136,7 +137,7 @@ const Ib = () => {
                     <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
                       Subjects for Class {selectedClass}
                       <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
-                        Cambridge Syllabus
+                        IB MYP Syllabus
                       </span>
                     </h3>
                   </div>
@@ -156,8 +157,8 @@ const Ib = () => {
                   className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
                 >
                   {(() => {
-                    const gradeKey = selectedClass >= 11 ? 'grade11_12_electives' : `grade${selectedClass}`;
-                    const subjects = SUBJECT_DATA[gradeKey];
+                    const gradeKey = `grade${selectedClass}`;
+                    const subjects = IB_SUBJECT_DATA[gradeKey];
 
                     if (!subjects) {
                       return (
