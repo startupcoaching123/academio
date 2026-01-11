@@ -132,6 +132,877 @@ export const IB_SUBJECT_DATA = {
         }
       ]
     }
+  },
+
+  grade7: {
+    english: {
+      name: "IB MYP English Language & Literature – Class 7",
+      icon: <Type className="w-8 h-8" />,
+      color: "bg-indigo-50 text-indigo-600",
+      description: "IB MYP English Language & Literature – Class 7 deepens conceptual understanding and critical thinking through analysis of diverse texts.",
+      topics: [
+        {
+          title: "Text Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Analysis of fiction and non-fiction texts",
+            "Vocabulary expansion and language accuracy",
+            "Critical reading and interpretation"
+          ]
+        },
+        {
+          title: "Writing Skills",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Structured and extended writing (narrative, descriptive, informative)",
+            "Grammar refinement and sentence variety",
+            "Effective written communication"
+          ]
+        },
+        {
+          title: "Oral Communication",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Oral communication through presentations and discussions",
+            "Confident expression and articulation",
+            "Active listening and response"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Critical reading and interpretation",
+            "Effective written and spoken communication",
+            "Independent thinking"
+          ]
+        }
+      ]
+    },
+
+    mathematics: {
+      name: "IB MYP Mathematics – Class 7",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB MYP Mathematics – Class 7 strengthens logical reasoning and mathematical communication through advanced concepts.",
+      topics: [
+        {
+          title: "Number Systems",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Number systems and rational numbers",
+            "Fractions, decimals, percentages, and ratios",
+            "Logical reasoning with numbers"
+          ]
+        },
+        {
+          title: "Algebra",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Introduction to algebraic expressions and equations",
+            "Mathematical communication",
+            "Problem-solving with algebra"
+          ]
+        },
+        {
+          title: "Geometry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Geometry: angles, polygons, perimeter, and area",
+            "Spatial reasoning and visualization",
+            "Geometric problem solving"
+          ]
+        },
+        {
+          title: "Data Handling",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Data handling, averages, and basic probability",
+            "Real-life problem-solving",
+            "Data interpretation and analysis"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Logical reasoning",
+            "Mathematical communication",
+            "Concept application"
+          ]
+        }
+      ]
+    },
+
+    science: {
+      name: "IB MYP Sciences – Class 7 (Integrated Biology, Chemistry & Physics)",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB MYP Sciences – Class 7 provides integrated science education with emphasis on scientific inquiry and experimentation.",
+      topics: [
+        {
+          title: "Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Cells and tissues",
+            "Nutrition and digestion",
+            "Plant systems and reproduction",
+            "Scientific inquiry in biology"
+          ]
+        },
+        {
+          title: "Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Particle theory of matter",
+            "Physical and chemical changes",
+            "Acids, bases, and simple reactions",
+            "Experimental chemistry"
+          ]
+        },
+        {
+          title: "Physics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Forces and motion",
+            "Energy forms and transfers",
+            "Light and sound",
+            "Physics investigations"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Scientific inquiry and experimentation",
+            "Data analysis and observation",
+            "Understanding scientific concepts in real-world contexts"
+          ]
+        }
+      ]
+    }
+  },
+
+  grade8: {
+    english: {
+      name: "IB MYP English Language & Literature – Class 8",
+      icon: <Type className="w-8 h-8" />,
+      color: "bg-indigo-50 text-indigo-600",
+      description: "IB MYP English Language & Literature – Class 8 strengthens analytical thinking and independent learning through complex text analysis.",
+      topics: [
+        {
+          title: "Advanced Text Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Study and analysis of complex fiction and non-fiction texts",
+            "Development of critical reading and interpretation skills",
+            "Literary analysis techniques"
+          ]
+        },
+        {
+          title: "Extended Writing",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Extended writing: essays, reports, and creative responses",
+            "Refinement of grammar, vocabulary, and writing style",
+            "Academic writing skills"
+          ]
+        },
+        {
+          title: "Oral Communication",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Oral communication through structured discussions and presentations",
+            "Advanced articulation skills",
+            "Critical discourse and debate"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Analytical and critical thinking",
+            "Clear and effective communication",
+            "Independent expression"
+          ]
+        }
+      ]
+    },
+
+    mathematics: {
+      name: "IB MYP Mathematics – Class 8",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB MYP Mathematics – Class 8 builds strong conceptual foundations through advanced mathematical concepts and applications.",
+      topics: [
+        {
+          title: "Advanced Number Systems",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Rational numbers and real-number concepts",
+            "Advanced fractions, percentages, and ratios",
+            "Mathematical reasoning and proof"
+          ]
+        },
+        {
+          title: "Algebra",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Algebra: linear equations and expressions",
+            "Mathematical modelling",
+            "Advanced problem solving"
+          ]
+        },
+        {
+          title: "Geometry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Geometry: polygons, angles, circles, and mensuration",
+            "Advanced spatial reasoning",
+            "Geometric proofs and constructions"
+          ]
+        },
+        {
+          title: "Data Handling",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Data handling, statistics, and probability (introductory)",
+            "Application-based problem solving",
+            "Statistical analysis and interpretation"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Logical reasoning and accuracy",
+            "Mathematical modelling",
+            "Conceptual understanding"
+          ]
+        }
+      ]
+    },
+
+    science: {
+      name: "IB MYP Sciences – Class 8 (Integrated Biology, Chemistry & Physics)",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB MYP Sciences – Class 8 prepares students for higher MYP years through advanced scientific concepts and investigations.",
+      topics: [
+        {
+          title: "Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Cell structure and functions",
+            "Human body systems",
+            "Microorganisms and health",
+            "Advanced biological investigations"
+          ]
+        },
+        {
+          title: "Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Atomic structure (introductory)",
+            "Chemical reactions and equations",
+            "Acids, bases, and salts",
+            "Quantitative chemistry basics"
+          ]
+        },
+        {
+          title: "Physics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Motion and forces",
+            "Energy and heat",
+            "Electricity and magnetism (foundations)",
+            "Advanced physics investigations"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Scientific inquiry and investigation",
+            "Experimental and analytical skills",
+            "Real-world application of scientific concepts"
+          ]
+        }
+      ]
+    }
+  },
+
+  grade9: {
+    english: {
+      name: "IB MYP English Language & Literature – Class 9",
+      icon: <Type className="w-8 h-8" />,
+      color: "bg-indigo-50 text-indigo-600",
+      description: "IB MYP English Language & Literature – Class 9 builds conceptual depth through critical analysis and academic writing.",
+      topics: [
+        {
+          title: "Text Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Critical analysis of literary and non-literary texts",
+            "Comparative reading and interpretation",
+            "Literary analysis techniques"
+          ]
+        },
+        {
+          title: "Writing Skills",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Structured academic and analytical writing",
+            "Creative and reflective writing",
+            "Advanced grammar and vocabulary"
+          ]
+        },
+        {
+          title: "Oral Communication",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Oral presentations and discussions",
+            "Confident communication skills",
+            "Critical discourse and debate"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Critical thinking",
+            "Academic writing",
+            "Confident communication"
+          ]
+        }
+      ]
+    },
+
+    mathematics: {
+      name: "IB MYP Mathematics – Class 9",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB MYP Mathematics – Class 9 develops advanced mathematical reasoning and problem-solving skills.",
+      topics: [
+        {
+          title: "Algebra",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Algebraic expressions, equations, and functions",
+            "Mathematical modelling and applications",
+            "Advanced problem solving"
+          ]
+        },
+        {
+          title: "Geometry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Geometry and trigonometry foundations",
+            "Spatial reasoning and proofs",
+            "Geometric applications"
+          ]
+        },
+        {
+          title: "Statistics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Statistics and probability",
+            "Data analysis and interpretation",
+            "Statistical reasoning"
+          ]
+        },
+        {
+          title: "Number Systems",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Number systems and proportional reasoning",
+            "Mathematical communication",
+            "Logical reasoning"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Logical reasoning",
+            "Problem-solving skills",
+            "Mathematical communication"
+          ]
+        }
+      ]
+    },
+
+    science: {
+      name: "IB MYP Sciences – Class 9 (Integrated Biology, Chemistry & Physics)",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB MYP Sciences – Class 9 provides advanced integrated science education with emphasis on scientific inquiry.",
+      topics: [
+        {
+          title: "Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Cell biology and genetics (introductory)",
+            "Human body systems",
+            "Advanced biological investigations"
+          ]
+        },
+        {
+          title: "Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Atomic structure and bonding",
+            "Chemical reactions and energy changes",
+            "Quantitative chemistry"
+          ]
+        },
+        {
+          title: "Physics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Motion, forces, and energy",
+            "Electricity and magnetism (introductory)",
+            "Advanced physics investigations"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Scientific inquiry",
+            "Data analysis",
+            "Real-world application of science"
+          ]
+        }
+      ]
+    }
+  },
+
+  grade10: {
+    english: {
+      name: "IB MYP English Language & Literature – Class 10",
+      icon: <Type className="w-8 h-8" />,
+      color: "bg-indigo-50 text-indigo-600",
+      description: "IB MYP English Language & Literature – Class 10 completes MYP with advanced analytical and communication skills.",
+      topics: [
+        {
+          title: "Advanced Text Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "In-depth analysis of complex texts",
+            "Evaluation and interpretation of themes and ideas",
+            "Advanced literary criticism"
+          ]
+        },
+        {
+          title: "Advanced Writing",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced academic and essay writing",
+            "Reflective and personal responses",
+            "Professional writing skills"
+          ]
+        },
+        {
+          title: "Oral Communication",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Oral presentations and discussions",
+            "Advanced articulation and debate",
+            "Professional communication"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Analytical and evaluative thinking",
+            "Advanced writing skills",
+            "Effective communication"
+          ]
+        }
+      ]
+    },
+
+    mathematics: {
+      name: "IB MYP Mathematics – Class 10",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB MYP Mathematics – Class 10 prepares students for IB DP with advanced mathematical concepts.",
+      topics: [
+        {
+          title: "Advanced Algebra",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Advanced algebra and functions",
+            "Mathematical reasoning and modelling",
+            "Complex problem solving"
+          ]
+        },
+        {
+          title: "Advanced Geometry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Geometry and trigonometry applications",
+            "Advanced geometric proofs",
+            "Mathematical visualization"
+          ]
+        },
+        {
+          title: "Statistics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Statistics and probability",
+            "Advanced data analysis",
+            "Statistical modelling"
+          ]
+        },
+        {
+          title: "Mathematical Applications",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Problem-solving in real-world contexts",
+            "Mathematical research skills",
+            "Independent mathematical inquiry"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Logical and abstract thinking",
+            "Mathematical precision",
+            "Independent problem-solving"
+          ]
+        }
+      ]
+    },
+
+    science: {
+      name: "IB MYP Sciences – Class 10 (Integrated Biology, Chemistry & Physics)",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB MYP Sciences – Class 10 completes MYP science education, preparing students for IB DP sciences.",
+      topics: [
+        {
+          title: "Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Genetics and inheritance",
+            "Ecology and environmental systems",
+            "Advanced biological research"
+          ]
+        },
+        {
+          title: "Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Chemical reactions and equations",
+            "Acids, bases, and energy transformations",
+            "Advanced chemical analysis"
+          ]
+        },
+        {
+          title: "Physics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Forces and motion",
+            "Electricity, magnetism, and waves",
+            "Advanced physics investigations"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Experimental and investigative skills",
+            "Scientific evaluation",
+            "Application of scientific concepts"
+          ]
+        }
+      ]
+    }
+  },
+
+  grade11: {
+    mathematics: {
+      name: "IB DP Mathematics: Analysis & Approaches – Class 11",
+      icon: <PiSquareDuotone className="w-8 h-8" />,
+      color: "bg-emerald-50 text-emerald-600",
+      description: "IB DP Mathematics: Analysis & Approaches – Class 11 builds strong foundations for mathematical analysis and reasoning.",
+      topics: [
+        {
+          title: "Algebra and Functions",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Algebra and functions",
+            "Mathematical reasoning",
+            "Function analysis"
+          ]
+        },
+        {
+          title: "Trigonometry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Trigonometry",
+            "Trigonometric functions and identities",
+            "Applications of trigonometry"
+          ]
+        },
+        {
+          title: "Calculus Introduction",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Introduction to calculus",
+            "Limits and derivatives",
+            "Basic integration"
+          ]
+        },
+        {
+          title: "Statistics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Probability and statistics",
+            "Statistical analysis",
+            "Data interpretation"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Mathematical reasoning",
+            "Analytical thinking",
+            "Problem-solving skills"
+          ]
+        }
+      ]
+    },
+
+    physics: {
+      name: "IB DP Physics – Class 11",
+      icon: <Atom className="w-8 h-8" />,
+      color: "bg-blue-50 text-blue-600",
+      description: "IB DP Physics – Class 11 introduces fundamental physics concepts with emphasis on experimental skills.",
+      topics: [
+        {
+          title: "Measurements",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Measurements and uncertainties",
+            "Experimental techniques",
+            "Data analysis"
+          ]
+        },
+        {
+          title: "Mechanics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Mechanics and thermal physics",
+            "Forces and motion",
+            "Energy and momentum"
+          ]
+        },
+        {
+          title: "Waves and Electricity",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Waves and electricity",
+            "Wave phenomena",
+            "Electric circuits"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Experimental and practical skills",
+            "Scientific reasoning",
+            "Problem-solving in physics"
+          ]
+        }
+      ]
+    },
+
+    chemistry: {
+      name: "IB DP Chemistry – Class 11",
+      icon: <FlaskConical className="w-8 h-8" />,
+      color: "bg-purple-50 text-purple-600",
+      description: "IB DP Chemistry – Class 11 builds foundational understanding of chemical principles and experimental techniques.",
+      topics: [
+        {
+          title: "Atomic Structure",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Atomic structure and bonding",
+            "Periodic trends",
+            "Chemical bonding"
+          ]
+        },
+        {
+          title: "Quantitative Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Stoichiometry",
+            "Mole concept",
+            "Chemical calculations"
+          ]
+        },
+        {
+          title: "Physical Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Energetics and kinetics",
+            "Chemical equilibrium",
+            "Reaction rates"
+          ]
+        },
+        {
+          title: "Organic Chemistry",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Introduction to organic chemistry",
+            "Hydrocarbons",
+            "Basic organic reactions"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Experimental skills",
+            "Chemical analysis",
+            "Scientific reasoning"
+          ]
+        }
+      ]
+    },
+
+    biology: {
+      name: "IB DP Biology – Class 11",
+      icon: <Dna className="w-8 h-8" />,
+      color: "bg-green-50 text-green-600",
+      description: "IB DP Biology – Class 11 introduces molecular biology and genetics with emphasis on practical investigations.",
+      topics: [
+        {
+          title: "Cell Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Cell biology",
+            "Cell structure and function",
+            "Cellular processes"
+          ]
+        },
+        {
+          title: "Molecular Biology",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Molecular biology",
+            "DNA and RNA",
+            "Protein synthesis"
+          ]
+        },
+        {
+          title: "Genetics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Introduction to genetics",
+            "Heredity and variation",
+            "Genetic engineering"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Practical investigations",
+            "Biological analysis",
+            "Scientific methodology"
+          ]
+        }
+      ]
+    },
+
+    economics: {
+      name: "IB DP Economics – Class 11",
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: "bg-orange-50 text-orange-600",
+      description: "IB DP Economics – Class 11 introduces microeconomic principles and economic analysis skills.",
+      topics: [
+        {
+          title: "Microeconomics",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Introduction to microeconomics",
+            "Demand, supply, and elasticity",
+            "Market structures"
+          ]
+        },
+        {
+          title: "Economic Analysis",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Economic analysis skills",
+            "Market equilibrium",
+            "Government intervention"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Economic reasoning",
+            "Analytical skills",
+            "Critical thinking"
+          ]
+        }
+      ]
+    },
+
+    computerScience: {
+      name: "IB DP Computer Science – Class 11",
+      icon: <Cpu className="w-8 h-8" />,
+      color: "bg-violet-50 text-violet-600",
+      description: "IB DP Computer Science – Class 11 introduces computational thinking and programming fundamentals.",
+      topics: [
+        {
+          title: "Computational Thinking",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Computational thinking",
+            "Algorithmic problem solving",
+            "Logical reasoning"
+          ]
+        },
+        {
+          title: "Programming",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Programming fundamentals",
+            "Data structures",
+            "Algorithm implementation"
+          ]
+        },
+        {
+          title: "Computer Systems",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Computer systems",
+            "Hardware and software",
+            "Network fundamentals"
+          ]
+        },
+        {
+          title: "Skills Developed",
+          icon: <Info className="w-5 h-5" />,
+          subtopics: [
+            "Programming skills",
+            "Problem-solving",
+            "System design"
+          ]
+        }
+      ]
+    }
   }
 };
 

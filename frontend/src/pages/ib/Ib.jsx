@@ -47,7 +47,7 @@ const FEATURES_DATA = [
 const Ib = () => {
   const [selectedClass, setSelectedClass] = useState(6);
   const navigate = useNavigate();
-  const classes = [6, 7, 8]; // IB MYP focuses on grades 6-8
+  const classes = [6, 7, 8, 9, 10, 11]; // IB MYP (6-10) and IB DP (11)
 
   // --- Animation Variants ---
   const gridContainerVariants = {
@@ -137,7 +137,7 @@ const Ib = () => {
                     <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
                       Subjects for Class {selectedClass}
                       <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
-                        IB MYP Syllabus
+                        {selectedClass >= 11 ? 'IB DP Syllabus' : 'IB MYP Syllabus'}
                       </span>
                     </h3>
                   </div>
