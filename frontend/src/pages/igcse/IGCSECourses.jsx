@@ -79,7 +79,7 @@ const ModernIGCSE = () => {
             animate={{ opacity: 1, y: 0 }}
             className="inline-block py-1.5 px-4 rounded-full bg-teal-50 border border-teal-100 text-teal-700 text-xs font-bold tracking-widest uppercase mb-6"
           >
-            IGCSE International AS & A Level
+            IGCSE Curriculum
           </motion.div>
           <h1 className="text-4xl md:text-6xl font-extrabold text-slate-900 mb-6 tracking-tight">
             IGCSE Board Courses by <span className="text-transparent bg-clip-text bg-gradient-to-r from-teal-600 to-emerald-500">Academio</span>
