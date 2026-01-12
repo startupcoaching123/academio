@@ -35,12 +35,12 @@ const FEATURES_DATA = [
   {
     title: "Expert Graded Feedback",
     desc: "Our tutors provide in-depth, personalized feedback on graded work, helping you understand each correction.",
-    img: "https://cdn-icons-png.flaticon.com/512/3206/3206037.png"
+    img: "https://cdn-icons-png.flaticon.com/512/1205/1205526.png"
   },
   {
     title: "Regular Parental Updates",
     desc: "Parents receive consistent progress reports and performance insights, ensuring everyone is aligned on the student's journey.",
-    img: "https://cdn-icons-png.flaticon.com/512/2855/2855734.png"
+    img: "https://cdn-icons-png.flaticon.com/512/1589/1589608.png"
   },
 ];
 
@@ -205,6 +205,34 @@ const ModernIGCSE = () => {
             </motion.div>
           )}
         </AnimatePresence>
+
+        {/* --- ENROLLMENT CTA SECTION --- */}
+        <div className="bg-gradient-to-r from-teal-600 to-emerald-500 rounded-[2.5rem] p-8 md:p-12 mb-12 shadow-lg relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-white/10 rounded-full blur-3xl" />
+          <div className="absolute bottom-0 left-0 w-48 h-48 bg-white/10 rounded-full blur-2xl" />
+          
+          <motion.div 
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="relative z-10 text-center"
+          >
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+              Ready to Excel in Class {selectedClass || 'Your Selected Class'}?
+            </h2>
+            <p className="text-teal-50 text-lg mb-8 max-w-2xl mx-auto">
+              Join thousands of students achieving academic excellence with our expert-led IGCSE programs.
+            </p>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/enrollment-form')}
+              className="bg-white text-teal-700 px-8 py-3 rounded-full font-bold text-base shadow-xl hover:shadow-2xl transition-all border-2 border-white/20"
+            >
+              Enroll Now
+            </motion.button>
+          </motion.div>
+        </div>
 
       </div>
 

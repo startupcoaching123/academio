@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const CtaSection = () => {
   const navigate = useNavigate();
   return (
-    <div className="w-full min-h-[300px] flex items-center justify-center p-4 py-10">
+    <div className="w-full min-h-[300px] flex items-center justify-center p-4">
       {/* Main Card Container */}
       <div className="relative w-full max-w-6xl overflow-hidden rounded-3xl bg-[#1a1a1a] border border-white/5 shadow-2xl">
         

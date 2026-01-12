@@ -56,16 +56,14 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50/30 flex items-center justify-center py-20 mt-20 p-4 md:p-8 font-sans">
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 to-teal-50/30 flex items-center justify-center py-20 mt-2 md:mt-15 p-4 md:p-8 font-sans">
       
       {/* Main Card */}
       <div className="max-w-6xl w-full bg-white rounded-3xl shadow-xl overflow-hidden border border-slate-100">
         
         {/* Header Section */}
         <div className="text-center pt-10 pb-6 px-6 bg-gradient-to-r from-teal-700/5 to-slate-100/50">
-          <div className="flex items-center justify-center mb-6">
-            <img src={logo} alt="Logo" className="h-20 object-contain" />
-          </div>
+       
           <h1 className="text-3xl md:text-4xl font-extrabold text-slate-800 tracking-tight mb-3">
             Get in <span className="text-teal-700">Touch</span>
           </h1>

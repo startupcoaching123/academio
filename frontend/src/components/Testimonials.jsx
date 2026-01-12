@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
-import { Play, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Play } from 'lucide-react';
 import testimonialBg1 from '../assets/1.jpg';
 import testimonialBg2 from '../assets/2.jpg';
 import testimonialBg3 from '../assets/inline_image_preview.jpg';
@@ -47,14 +47,14 @@ const Testimonials = () => {
                 </div>
 
                 <div className="relative" ref={ref}>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <div className="flex md:grid md:grid-cols-3 gap-6 md:gap-8 overflow-x-auto md:overflow-visible snap-x md:snap-none pb-8 md:pb-0 -mx-4 px-4 md:mx-0 md:px-0">
                         {testimonials.map((item, index) => (
                             <motion.div
                                 key={index}
                                 initial={{ opacity: 0, y: 30 }}
                                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                                 transition={{ duration: 0.5, delay: index * 0.2 }}
-                                className="flex flex-col group"
+                                className="flex flex-col group min-w-[85vw] sm:min-w-[20rem] md:w-full flex-shrink-0 snap-center md:snap-none"
                             >
                                 <div className={`relative aspect-[4/3] rounded-3xl overflow-hidden shadow-md group-hover:shadow-xl transition-all duration-500 group-hover:scale-105`}
                                     style={{
@@ -79,9 +79,6 @@ const Testimonials = () => {
                                     </div>
                                 </div>
                                 <div className="mt-6">
-                                    <div className="flex text-yellow-400 mb-2">
-                                        {[...Array(5)].map((_, i) => <span key={i}>★</span>)}
-                                    </div>
                                     <p className="text-gray-600 text-lg font-medium leading-relaxed">"{item.quote}"</p>
                                 </div>
                             </motion.div>
@@ -89,7 +86,7 @@ const Testimonials = () => {
                     </div>
 
                     {/* Pagination Dots */}
-                    <div className="flex justify-center mt-12 space-x-3">
+                    <div className="flex justify-center mt-8 md:mt-12 space-x-3">
                         {[0, 1, 2].map((dot) => (
                             <div key={dot} className={`h-2 rounded-full transition-all duration-300 ${dot === 0 ? 'w-8 bg-[rgb(12,81,79)]' : 'w-2 bg-gray-300'}`} />
                         ))}

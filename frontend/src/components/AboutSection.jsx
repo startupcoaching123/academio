@@ -44,7 +44,7 @@ const AboutSection = () => {
   ];
 
   return (
-    <section className="py-15 bg-white relative overflow-hidden">
+    <section className="py-5 bg-white relative overflow-hidden">
       {/* Background Decor */}
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-teal-50/30 via-transparent to-emerald-50/20 -z-10" />
       

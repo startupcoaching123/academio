@@ -3063,7 +3063,7 @@ const SubjectDetail = () => {
         <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-blue-200/30 rounded-full blur-[120px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-40 pb-12">
+      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 md:pt-40 pb-12">
 
         {/* Breadcrumb Navigation */}
         <motion.div
@@ -3082,12 +3082,7 @@ const SubjectDetail = () => {
             CLASS {grade ? `${grade}th` : '9th'}
           </span>
           <span className="text-slate-400">/</span>
-          <span className="hover:text-teal-600 transition-colors cursor-pointer">
-            {board === 'IB' 
-              ? (grade >= 11 ? 'IB Diploma Programme' : 'IB Middle Years Programme')
-              : (grade >= 11 ? (grade >= 12 ? 'Cambridge International A Level' : 'Cambridge International AS Level') : 'Cambridge IGCSE')
-            }
-          </span>
+         
           <span className="text-slate-400">/</span>
           <span className="text-slate-900 font-medium">{subjectData.name}</span>
         </motion.div>

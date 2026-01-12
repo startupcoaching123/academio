@@ -34,7 +34,7 @@ const AboutUs = () => {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-br from-slate-50 to-teal-50/30 py-20 mt-20 font-sans">
+    <div className="min-h-screen bg-linear-to-br from-slate-50 to-teal-50/30 py-20 mt-15 font-sans">
       
       {/* Hero Section */}
       <div className="max-w-7xl mx-auto px-4 md:px-8 mb-16">
@@ -44,9 +44,7 @@ const AboutUs = () => {
           transition={{ duration: 0.8 }}
           className="text-center"
         >
-          <div className="flex items-center justify-center mb-6">
-            <img src={logo} alt="Academio Logo" className="h-20 object-contain" />
-          </div>
+  
           <h1 className="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight mb-6">
             About <span className="text-[rgb(12,81,79)]">Us</span>
           </h1>
