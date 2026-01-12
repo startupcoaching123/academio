@@ -45,7 +45,7 @@ const FEATURES_DATA = [
 ];
 
 const ModernIGCSE = () => {
-  const [selectedClass, setSelectedClass] = useState(6);
+  const [selectedClass, setSelectedClass] = useState(9);
   const navigate = useNavigate();
   const classes = [6, 7, 8, 9, 10, 11, 12];
 
@@ -98,7 +98,7 @@ const ModernIGCSE = () => {
             return (
               <motion.button
                 key={cls}
-                onClick={() => setSelectedClass(isSelected ? null : cls)} // Toggle
+                onClick={() => setSelectedClass(cls)} // Select only
                 animate={{
                   scale: isSelected ? 1.1 : (isInactive ? 0.9 : 1),
                   opacity: isInactive ? 0.6 : 1

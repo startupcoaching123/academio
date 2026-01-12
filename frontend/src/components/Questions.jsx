@@ -6,7 +6,7 @@ const questions = [
     {
         icon: <HelpCircle className="h-8 w-8 text-blue-500" />,
         title: "Do You Support Both",
-        highlight: "IGCSE And IB Curricula?",
+        highlight: "IGCSE And IB Curriculam?",
         bg: "bg-blue-50"
     },
     {

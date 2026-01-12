@@ -3025,13 +3025,16 @@ const SubjectDetail = () => {
 
   const subjectData = getSubjectData(subject, grade);
 
+  const board = location.state?.board || 'IGCSE';
+  const boardRoute = board === 'IB' ? '/ib-courses' : '/igcse-courses';
+
   if (!subjectData) {
     return (
       <div className="min-h-screen bg-[#F3F6F8] flex items-center justify-center">
         <div className="text-center">
           <h1 className="text-2xl font-bold text-slate-800 mb-4">Subject not found</h1>
           <button
-            onClick={() => navigate('/igcse-courses')}
+            onClick={() => navigate(boardRoute)}
             className="text-teal-600 hover:text-teal-700 font-medium"
           >
             Back to Courses
@@ -3068,13 +3071,23 @@ const SubjectDetail = () => {
           animate={{ opacity: 1, y: 0 }}
           className="flex items-center gap-2 text-sm text-slate-600 mb-8"
         >
-          <Link to="/igcse-courses" className="hover:text-teal-600 transition-colors">
-            IGCSE
+          <Link 
+            to={boardRoute} 
+            className="hover:text-teal-600 transition-colors"
+          >
+            {board}
           </Link>
           <span className="text-slate-400">/</span>
-          <span className="hover:text-teal-600 transition-colors cursor-pointer">CLASS 9th</span>
+          <span className="hover:text-teal-600 transition-colors cursor-pointer">
+            CLASS {grade ? `${grade}th` : '9th'}
+          </span>
           <span className="text-slate-400">/</span>
-          <span className="hover:text-teal-600 transition-colors cursor-pointer">Cambridge International AS & A Level</span>
+          <span className="hover:text-teal-600 transition-colors cursor-pointer">
+            {board === 'IB' 
+              ? (grade >= 11 ? 'IB Diploma Programme' : 'IB Middle Years Programme')
+              : (grade >= 11 ? (grade >= 12 ? 'Cambridge International A Level' : 'Cambridge International AS Level') : 'Cambridge IGCSE')
+            }
+          </span>
           <span className="text-slate-400">/</span>
           <span className="text-slate-900 font-medium">{subjectData.name}</span>
         </motion.div>
@@ -3087,7 +3100,7 @@ const SubjectDetail = () => {
           className="mb-12"
         >
           <button
-            onClick={() => navigate('/igcse-courses')}
+            onClick={() => navigate(boardRoute)}
             className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium mb-6 transition-colors"
           >
             <ArrowLeft className="w-5 h-5" />
