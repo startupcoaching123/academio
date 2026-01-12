@@ -3308,14 +3308,24 @@ const SubjectDetail = () => {
           <p className="text-teal-50 mb-8 max-w-2xl mx-auto">
             Join our comprehensive IGCSE {subjectData.name} program and excel in your exams with expert guidance.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            onClick={() => navigate('/enrollment-form')}
-            className="bg-white text-teal-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
-          >
-            Enroll Now
-          </motion.button>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/enrollment-form')}
+              className="bg-white text-teal-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+            >
+              Enroll Now
+            </motion.button>
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => navigate('/enrollment-form')}
+              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-white hover:text-teal-700 transition-all"
+            >
+              Consult Now
+            </motion.button>
+          </div>
         </motion.div>
       </div>
     </div>
