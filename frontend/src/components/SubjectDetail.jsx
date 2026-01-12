@@ -3081,7 +3081,7 @@ const SubjectDetail = () => {
           <span className="hover:text-teal-600 transition-colors cursor-pointer">
             CLASS {grade ? `${grade}th` : '9th'}
           </span>
-          <span className="text-slate-400">/</span>
+          
          
           <span className="text-slate-400">/</span>
           <span className="text-slate-900 font-medium">{subjectData.name}</span>
