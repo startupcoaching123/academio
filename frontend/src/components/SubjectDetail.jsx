@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate, Link, useLocation } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
 import {
@@ -11,14 +11,14 @@ import { PiSquareDuotone } from 'react-icons/pi';
 export const IB_SUBJECT_DATA = {
   grade6: {
     english: {
-      name: "IB MYP English Language & Literature – Class 6",
+      name: "IB MYP English Language & Literature",
       icon: <Type className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 6 develops communication and critical thinking through fiction and non-fiction texts.",
       topics: [
         {
           title: "Reading and Understanding",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Reading and understanding fiction and non-fiction texts",
             "Vocabulary development and language usage",
@@ -28,7 +28,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Writing Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured writing (paragraphs, short essays, creative writing)",
             "Grammar, sentence structure, and clarity",
@@ -37,7 +37,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Speaking and Listening",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Speaking and listening through discussions and presentations",
             "Oral communication skills",
@@ -48,14 +48,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematics: {
-      name: "IB MYP Mathematics – Class 6",
+      name: "IB MYP Mathematics",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB MYP Mathematics – Class 6 develops logical reasoning and mathematical communication through real-world applications.",
       topics: [
         {
           title: "Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Number systems and operations",
             "Fractions, decimals, and percentages",
@@ -64,7 +64,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Algebraic Thinking",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Patterns and basic algebraic thinking",
             "Mathematical communication",
@@ -73,7 +73,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry: shapes, angles, and measurements",
             "Spatial reasoning"
@@ -81,7 +81,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data handling and simple statistics",
             "Problem-solving using real-life situations"
@@ -91,14 +91,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     science: {
-      name: "IB MYP Sciences – Class 6 (Integrated Biology, Chemistry & Physics)",
+      name: "IB MYP Sciences (Integrated Biology, Chemistry & Physics)",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB MYP Sciences – Class 6 provides integrated science education through inquiry-based learning and investigation.",
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Characteristics of living organisms",
             "Human body basics and health",
@@ -107,7 +107,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Matter and its properties",
             "Observation and experimentation",
@@ -116,7 +116,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Energy, forces, light, and sound",
             "Scientific investigation"
@@ -124,7 +124,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Environmental Science",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Earth, environment, and sustainability",
             "Real-world scientific applications"
@@ -136,14 +136,14 @@ export const IB_SUBJECT_DATA = {
 
   grade7: {
     english: {
-      name: "IB MYP English Language & Literature – Class 7",
+      name: "IB MYP English Language & Literature",
       icon: <Type className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 7 deepens conceptual understanding and critical thinking through analysis of diverse texts.",
       topics: [
         {
           title: "Text Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Analysis of fiction and non-fiction texts",
             "Vocabulary expansion and language accuracy",
@@ -152,7 +152,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Writing Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured and extended writing (narrative, descriptive, informative)",
             "Grammar refinement and sentence variety",
@@ -161,7 +161,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Oral Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Oral communication through presentations and discussions",
             "Confident expression and articulation",
@@ -170,7 +170,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Critical reading and interpretation",
             "Effective written and spoken communication",
@@ -181,14 +181,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematics: {
-      name: "IB MYP Mathematics – Class 7",
+      name: "IB MYP Mathematics",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB MYP Mathematics – Class 7 strengthens logical reasoning and mathematical communication through advanced concepts.",
       topics: [
         {
           title: "Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Number systems and rational numbers",
             "Fractions, decimals, percentages, and ratios",
@@ -197,7 +197,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to algebraic expressions and equations",
             "Mathematical communication",
@@ -206,7 +206,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry: angles, polygons, perimeter, and area",
             "Spatial reasoning and visualization",
@@ -215,7 +215,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data handling, averages, and basic probability",
             "Real-life problem-solving",
@@ -224,7 +224,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Logical reasoning",
             "Mathematical communication",
@@ -235,14 +235,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     science: {
-      name: "IB MYP Sciences – Class 7 (Integrated Biology, Chemistry & Physics)",
+      name: "IB MYP Sciences (Integrated Biology, Chemistry & Physics)",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB MYP Sciences – Class 7 provides integrated science education with emphasis on scientific inquiry and experimentation.",
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cells and tissues",
             "Nutrition and digestion",
@@ -252,7 +252,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Particle theory of matter",
             "Physical and chemical changes",
@@ -262,7 +262,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Forces and motion",
             "Energy forms and transfers",
@@ -272,7 +272,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Scientific inquiry and experimentation",
             "Data analysis and observation",
@@ -285,14 +285,14 @@ export const IB_SUBJECT_DATA = {
 
   grade8: {
     english: {
-      name: "IB MYP English Language & Literature – Class 8",
+      name: "IB MYP English Language & Literature",
       icon: <Type className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 8 strengthens analytical thinking and independent learning through complex text analysis.",
       topics: [
         {
           title: "Advanced Text Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Study and analysis of complex fiction and non-fiction texts",
             "Development of critical reading and interpretation skills",
@@ -301,7 +301,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Extended Writing",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Extended writing: essays, reports, and creative responses",
             "Refinement of grammar, vocabulary, and writing style",
@@ -310,7 +310,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Oral Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Oral communication through structured discussions and presentations",
             "Advanced articulation skills",
@@ -319,7 +319,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Analytical and critical thinking",
             "Clear and effective communication",
@@ -330,14 +330,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematics: {
-      name: "IB MYP Mathematics – Class 8",
+      name: "IB MYP Mathematics",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB MYP Mathematics – Class 8 builds strong conceptual foundations through advanced mathematical concepts and applications.",
       topics: [
         {
           title: "Advanced Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Rational numbers and real-number concepts",
             "Advanced fractions, percentages, and ratios",
@@ -346,7 +346,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebra: linear equations and expressions",
             "Mathematical modelling",
@@ -355,7 +355,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry: polygons, angles, circles, and mensuration",
             "Advanced spatial reasoning",
@@ -364,7 +364,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data handling, statistics, and probability (introductory)",
             "Application-based problem solving",
@@ -373,7 +373,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Logical reasoning and accuracy",
             "Mathematical modelling",
@@ -384,14 +384,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     science: {
-      name: "IB MYP Sciences – Class 8 (Integrated Biology, Chemistry & Physics)",
+      name: "IB MYP Sciences (Integrated Biology, Chemistry & Physics)",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB MYP Sciences – Class 8 prepares students for higher MYP years through advanced scientific concepts and investigations.",
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cell structure and functions",
             "Human body systems",
@@ -401,7 +401,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure (introductory)",
             "Chemical reactions and equations",
@@ -411,7 +411,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Motion and forces",
             "Energy and heat",
@@ -421,7 +421,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Scientific inquiry and investigation",
             "Experimental and analytical skills",
@@ -434,14 +434,14 @@ export const IB_SUBJECT_DATA = {
 
   grade9: {
     english: {
-      name: "IB MYP English Language & Literature – Class 9",
+      name: "IB MYP English Language & Literature",
       icon: <Type className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 9 builds conceptual depth through critical analysis and academic writing.",
       topics: [
         {
           title: "Text Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Critical analysis of literary and non-literary texts",
             "Comparative reading and interpretation",
@@ -450,7 +450,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Writing Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured academic and analytical writing",
             "Creative and reflective writing",
@@ -459,7 +459,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Oral Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Oral presentations and discussions",
             "Confident communication skills",
@@ -468,7 +468,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Critical thinking",
             "Academic writing",
@@ -479,14 +479,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematics: {
-      name: "IB MYP Mathematics – Class 9",
+      name: "IB MYP Mathematics",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB MYP Mathematics – Class 9 develops advanced mathematical reasoning and problem-solving skills.",
       topics: [
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebraic expressions, equations, and functions",
             "Mathematical modelling and applications",
@@ -495,7 +495,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry and trigonometry foundations",
             "Spatial reasoning and proofs",
@@ -504,7 +504,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Statistics and probability",
             "Data analysis and interpretation",
@@ -513,7 +513,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Number systems and proportional reasoning",
             "Mathematical communication",
@@ -522,7 +522,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Logical reasoning",
             "Problem-solving skills",
@@ -533,14 +533,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     science: {
-      name: "IB MYP Sciences – Class 9 (Integrated Biology, Chemistry & Physics)",
+      name: "IB MYP Sciences (Integrated Biology, Chemistry & Physics)",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB MYP Sciences – Class 9 provides advanced integrated science education with emphasis on scientific inquiry.",
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cell biology and genetics (introductory)",
             "Human body systems",
@@ -549,7 +549,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure and bonding",
             "Chemical reactions and energy changes",
@@ -558,7 +558,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Motion, forces, and energy",
             "Electricity and magnetism (introductory)",
@@ -567,7 +567,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Scientific inquiry",
             "Data analysis",
@@ -580,14 +580,14 @@ export const IB_SUBJECT_DATA = {
 
   grade10: {
     english: {
-      name: "IB MYP English Language & Literature – Class 10",
+      name: "IB MYP English Language & Literature",
       icon: <Type className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 10 completes MYP with advanced analytical and communication skills.",
       topics: [
         {
           title: "Advanced Text Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "In-depth analysis of complex texts",
             "Evaluation and interpretation of themes and ideas",
@@ -596,7 +596,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Advanced Writing",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced academic and essay writing",
             "Reflective and personal responses",
@@ -605,7 +605,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Oral Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Oral presentations and discussions",
             "Advanced articulation and debate",
@@ -614,7 +614,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Analytical and evaluative thinking",
             "Advanced writing skills",
@@ -625,14 +625,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematics: {
-      name: "IB MYP Mathematics – Class 10",
+      name: "IB MYP Mathematics",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB MYP Mathematics – Class 10 prepares students for IB DP with advanced mathematical concepts.",
       topics: [
         {
           title: "Advanced Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced algebra and functions",
             "Mathematical reasoning and modelling",
@@ -641,7 +641,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Advanced Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry and trigonometry applications",
             "Advanced geometric proofs",
@@ -650,7 +650,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Statistics and probability",
             "Advanced data analysis",
@@ -659,7 +659,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Mathematical Applications",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Problem-solving in real-world contexts",
             "Mathematical research skills",
@@ -668,7 +668,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Logical and abstract thinking",
             "Mathematical precision",
@@ -679,14 +679,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     science: {
-      name: "IB MYP Sciences – Class 10 (Integrated Biology, Chemistry & Physics)",
+      name: "IB MYP Sciences (Integrated Biology, Chemistry & Physics)",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB MYP Sciences – Class 10 completes MYP science education, preparing students for IB DP sciences.",
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Genetics and inheritance",
             "Ecology and environmental systems",
@@ -695,7 +695,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Chemical reactions and equations",
             "Acids, bases, and energy transformations",
@@ -704,7 +704,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Forces and motion",
             "Electricity, magnetism, and waves",
@@ -713,7 +713,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Experimental and investigative skills",
             "Scientific evaluation",
@@ -726,14 +726,14 @@ export const IB_SUBJECT_DATA = {
 
   grade11: {
     mathematics: {
-      name: "IB DP Mathematics: Analysis & Approaches – Class 11",
+      name: "IB DP Mathematics: Analysis & Approaches",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB DP Mathematics: Analysis & Approaches – Class 11 builds strong foundations for mathematical analysis and reasoning.",
       topics: [
         {
           title: "Algebra and Functions",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebra and functions",
             "Mathematical reasoning",
@@ -742,7 +742,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Trigonometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Trigonometry",
             "Trigonometric functions and identities",
@@ -751,7 +751,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Calculus Introduction",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to calculus",
             "Limits and derivatives",
@@ -760,7 +760,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Probability and statistics",
             "Statistical analysis",
@@ -769,7 +769,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Mathematical reasoning",
             "Analytical thinking",
@@ -780,14 +780,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     physics: {
-      name: "IB DP Physics – Class 11",
+      name: "IB DP Physics",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB DP Physics – Class 11 introduces fundamental physics concepts with emphasis on experimental skills.",
       topics: [
         {
           title: "Measurements",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Measurements and uncertainties",
             "Experimental techniques",
@@ -796,7 +796,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Mechanics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Mechanics and thermal physics",
             "Forces and motion",
@@ -805,7 +805,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Waves and Electricity",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Waves and electricity",
             "Wave phenomena",
@@ -814,7 +814,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Experimental and practical skills",
             "Scientific reasoning",
@@ -825,14 +825,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     chemistry: {
-      name: "IB DP Chemistry – Class 11",
+      name: "IB DP Chemistry",
       icon: <FlaskConical className="w-8 h-8" />,
       color: "bg-purple-50 text-purple-600",
       description: "IB DP Chemistry – Class 11 builds foundational understanding of chemical principles and experimental techniques.",
       topics: [
         {
           title: "Atomic Structure",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure and bonding",
             "Periodic trends",
@@ -841,7 +841,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Quantitative Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Stoichiometry",
             "Mole concept",
@@ -850,7 +850,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Physical Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Energetics and kinetics",
             "Chemical equilibrium",
@@ -859,7 +859,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Organic Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to organic chemistry",
             "Hydrocarbons",
@@ -868,7 +868,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Experimental skills",
             "Chemical analysis",
@@ -879,14 +879,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     biology: {
-      name: "IB DP Biology – Class 11",
+      name: "IB DP Biology",
       icon: <Dna className="w-8 h-8" />,
       color: "bg-green-50 text-green-600",
       description: "IB DP Biology – Class 11 introduces molecular biology and genetics with emphasis on practical investigations.",
       topics: [
         {
           title: "Cell Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cell biology",
             "Cell structure and function",
@@ -895,7 +895,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Molecular Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Molecular biology",
             "DNA and RNA",
@@ -904,7 +904,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Genetics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to genetics",
             "Heredity and variation",
@@ -913,7 +913,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Practical investigations",
             "Biological analysis",
@@ -924,14 +924,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     economics: {
-      name: "IB DP Economics – Class 11",
+      name: "IB DP Economics",
       icon: <TrendingUp className="w-8 h-8" />,
       color: "bg-orange-50 text-orange-600",
       description: "IB DP Economics – Class 11 introduces microeconomic principles and economic analysis skills.",
       topics: [
         {
           title: "Microeconomics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to microeconomics",
             "Demand, supply, and elasticity",
@@ -940,7 +940,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Economic Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Economic analysis skills",
             "Market equilibrium",
@@ -949,7 +949,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Economic reasoning",
             "Analytical skills",
@@ -960,14 +960,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     computerScience: {
-      name: "IB DP Computer Science – Class 11",
+      name: "IB DP Computer Science",
       icon: <Cpu className="w-8 h-8" />,
       color: "bg-violet-50 text-violet-600",
       description: "IB DP Computer Science – Class 11 introduces computational thinking and programming fundamentals.",
       topics: [
         {
           title: "Computational Thinking",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Computational thinking",
             "Algorithmic problem solving",
@@ -976,7 +976,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Programming",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Programming fundamentals",
             "Data structures",
@@ -985,7 +985,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Computer Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Computer systems",
             "Hardware and software",
@@ -994,7 +994,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Programming skills",
             "Problem-solving",
@@ -1007,14 +1007,14 @@ export const IB_SUBJECT_DATA = {
 
   grade12: {
     mathematics: {
-      name: "IB DP Mathematics: Analysis & Approaches – Class 12",
+      name: "IB DP Mathematics: Analysis & Approaches",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-emerald-50 text-emerald-600",
       description: "IB DP Mathematics: Analysis & Approaches – Class 12 completes the DP with advanced calculus, mathematical proof, and exam preparation.",
       topics: [
         {
           title: "Advanced Calculus",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced calculus",
             "Trigonometric applications",
@@ -1023,7 +1023,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Probability and Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Probability distributions",
             "Statistical inference",
@@ -1032,7 +1032,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Mathematical Applications",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Mathematical modelling",
             "Problem-solving techniques",
@@ -1041,7 +1041,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced mathematical reasoning",
             "Analytical thinking",
@@ -1052,14 +1052,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     mathematicsAI: {
-      name: "IB DP Mathematics: Applications & Interpretation – Class 12",
+      name: "IB DP Mathematics: Applications & Interpretation",
       icon: <PiSquareDuotone className="w-8 h-8" />,
       color: "bg-teal-50 text-teal-600",
       description: "IB DP Mathematics: Applications & Interpretation – Class 12 focuses on real-world applications and data-driven problem solving.",
       topics: [
         {
           title: "Advanced Modelling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced modelling techniques",
             "Statistical inference",
@@ -1068,7 +1068,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Data Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data-driven problem solving",
             "Statistical applications",
@@ -1077,7 +1077,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Applied Mathematics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Real-world applications",
             "Mathematical investigation",
@@ -1086,7 +1086,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Applied mathematical thinking",
             "Data analysis skills",
@@ -1097,14 +1097,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     physics: {
-      name: "IB DP Physics – Class 12",
+      name: "IB DP Physics",
       icon: <Atom className="w-8 h-8" />,
       color: "bg-blue-50 text-blue-600",
       description: "IB DP Physics – Class 12 completes DP Physics with advanced topics and experimental analysis.",
       topics: [
         {
           title: "Advanced Mechanics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Circular motion and gravitation",
             "Advanced mechanics applications",
@@ -1113,7 +1113,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Fields and Electromagnetism",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Electric and magnetic fields",
             "Electromagnetic induction",
@@ -1122,7 +1122,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Modern Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Nuclear and quantum physics",
             "Atomic structure",
@@ -1131,7 +1131,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Experimental Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced experimental analysis",
             "Data processing",
@@ -1140,7 +1140,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced problem-solving",
             "Experimental expertise",
@@ -1151,14 +1151,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     chemistry: {
-      name: "IB DP Chemistry – Class 12",
+      name: "IB DP Chemistry",
       icon: <FlaskConical className="w-8 h-8" />,
       color: "bg-purple-50 text-purple-600",
       description: "IB DP Chemistry – Class 12 completes DP Chemistry with advanced topics and analytical techniques.",
       topics: [
         {
           title: "Physical Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Chemical equilibrium",
             "Electrochemistry",
@@ -1167,7 +1167,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Organic Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced organic chemistry",
             "Reaction mechanisms",
@@ -1176,7 +1176,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Analytical Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Analytical techniques",
             "Spectroscopy",
@@ -1185,7 +1185,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced laboratory skills",
             "Chemical analysis",
@@ -1196,14 +1196,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     biology: {
-      name: "IB DP Biology – Class 12",
+      name: "IB DP Biology",
       icon: <Dna className="w-8 h-8" />,
       color: "bg-green-50 text-green-600",
       description: "IB DP Biology – Class 12 completes DP Biology with advanced topics and data-based evaluation.",
       topics: [
         {
           title: "Advanced Genetics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Genetics and evolution",
             "Population genetics",
@@ -1212,7 +1212,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Human Physiology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Human physiology",
             "Advanced body systems",
@@ -1221,7 +1221,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Ecology and Environment",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Ecology and sustainability",
             "Conservation biology",
@@ -1230,7 +1230,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Data-Based Evaluation",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data-based scientific evaluation",
             "Statistical analysis in biology",
@@ -1239,7 +1239,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced biological analysis",
             "Research skills",
@@ -1250,14 +1250,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     economics: {
-      name: "IB DP Economics – Class 12",
+      name: "IB DP Economics",
       icon: <TrendingUp className="w-8 h-8" />,
       color: "bg-orange-50 text-orange-600",
       description: "IB DP Economics – Class 12 completes DP Economics with macroeconomic theory and policy evaluation.",
       topics: [
         {
           title: "Macroeconomic Theory",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Macroeconomic theory",
             "Economic models",
@@ -1266,7 +1266,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "International Economics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "International trade",
             "Exchange rates",
@@ -1275,7 +1275,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Development Economics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Development economics",
             "Growth strategies",
@@ -1284,7 +1284,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Policy Evaluation",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Policy evaluation and case studies",
             "Economic policy analysis",
@@ -1293,7 +1293,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Economic analysis",
             "Policy evaluation",
@@ -1304,14 +1304,14 @@ export const IB_SUBJECT_DATA = {
     },
 
     computerScience: {
-      name: "IB DP Computer Science – Class 12",
+      name: "IB DP Computer Science",
       icon: <Cpu className="w-8 h-8" />,
       color: "bg-violet-50 text-violet-600",
       description: "IB DP Computer Science – Class 12 completes DP Computer Science with advanced programming and system design.",
       topics: [
         {
           title: "Advanced Programming",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data structures and algorithms",
             "Advanced programming concepts",
@@ -1320,7 +1320,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "System Design",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Databases and system design",
             "Network systems",
@@ -1329,7 +1329,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Computational Thinking",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced computational thinking",
             "Algorithm optimization",
@@ -1338,7 +1338,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced programming skills",
             "System design expertise",
@@ -1356,7 +1356,7 @@ export const IB_SUBJECT_DATA = {
       topics: [
         {
           title: "Theory of Knowledge (TOK)",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Essay and exhibition completion",
             "Knowledge questions exploration",
@@ -1365,7 +1365,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Extended Essay (EE)",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Research writing and final submission",
             "Academic research skills",
@@ -1374,7 +1374,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Internal Assessments (IA)",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Completion and refinement",
             "Subject-specific investigations",
@@ -1383,7 +1383,7 @@ export const IB_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Academic research skills",
             "Critical thinking",
@@ -1406,7 +1406,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Reading",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Fiction and non-fiction texts",
             "Comprehension and interpretation",
@@ -1415,7 +1415,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Writing",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Paragraph writing",
             "Story writing",
@@ -1425,7 +1425,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Speaking & Listening",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Presentations",
             "Group discussions",
@@ -1434,7 +1434,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Communication skills",
             "Creative thinking",
@@ -1452,7 +1452,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Number Operations",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Number operations (integers, fractions, decimals, percentages)",
             "Ratios and basic proportions"
@@ -1460,35 +1460,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Introduction to Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to algebra (expressions, simple equations)"
           ]
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry (angles, triangles, quadrilaterals, symmetry)"
           ]
         },
         {
           title: "Measurement",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Measurement (perimeter, area, volume)"
           ]
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data handling (tables, bar graphs, pie charts)"
           ]
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Numerical fluency",
             "Logical thinking",
@@ -1506,7 +1506,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Living organisms and life processes",
             "Cells and basic human body systems",
@@ -1516,7 +1516,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "States of matter",
             "Changes (physical & chemical)",
@@ -1526,7 +1526,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Forces and motion",
             "Light and sound",
@@ -1536,7 +1536,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Scientific inquiry",
             "Observation & experimentation",
@@ -1556,7 +1556,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Reading",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Diverse fiction and non-fiction texts",
             "Analytical reading and inference",
@@ -1565,7 +1565,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Writing",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured paragraphs and essays",
             "Narrative and descriptive writing",
@@ -1575,7 +1575,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Speaking & Listening",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Group discussions and debates",
             "Oral presentations",
@@ -1584,7 +1584,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Clear communication",
             "Creative and critical thinking",
@@ -1602,7 +1602,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Number Operations",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Integers, fractions, decimals, and percentages",
             "Ratio, proportion, and basic financial maths"
@@ -1610,35 +1610,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebraic expressions and simple equations"
           ]
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Angles, polygons, circles, symmetry"
           ]
         },
         {
           title: "Measurement",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Area, volume, and units"
           ]
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Averages, graphs, and interpretation"
           ]
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Logical reasoning",
             "Mathematical accuracy",
@@ -1656,7 +1656,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cells, tissues, and organ systems",
             "Reproduction in plants and animals",
@@ -1666,7 +1666,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Particle model of matter",
             "Elements, compounds, and mixtures",
@@ -1676,7 +1676,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Forces, motion, and pressure",
             "Energy forms and transfers",
@@ -1686,7 +1686,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Scientific investigation",
             "Critical observation",
@@ -1706,7 +1706,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Reading",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Complex fiction and non-fiction texts",
             "Critical reading and inference",
@@ -1715,7 +1715,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Writing",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured essays and extended writing",
             "Narrative, descriptive, and argumentative writing",
@@ -1725,7 +1725,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Speaking & Listening",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Structured discussions and debates",
             "Presentations and public speaking",
@@ -1734,7 +1734,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Fluent communication",
             "Critical and creative expression",
@@ -1752,7 +1752,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Rational and irrational numbers",
             "Advanced fractions, decimals, percentages"
@@ -1760,42 +1760,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Ratio and Financial Mathematics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Ratio, proportion, and financial mathematics"
           ]
         },
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Expressions, equations, linear graphs"
           ]
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Triangles, quadrilaterals, circles"
           ]
         },
         {
           title: "Mensuration",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Surface area and volume"
           ]
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Statistics, probability basics"
           ]
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebraic thinking",
             "Logical and analytical skills",
@@ -1813,7 +1813,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cell structure and functions",
             "Photosynthesis and respiration",
@@ -1823,7 +1823,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure and periodic trends (introductory)",
             "Chemical reactions and equations",
@@ -1834,7 +1834,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Motion and forces",
             "Pressure in liquids and gases",
@@ -1845,7 +1845,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Skills Developed",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Experimental and investigative skills",
             "Scientific reasoning",
@@ -1865,42 +1865,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Number Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Number systems and calculations"
           ]
         },
         {
           title: "Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebraic expressions and equations"
           ]
         },
         {
           title: "Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Geometry and mensuration"
           ]
         },
         {
           title: "Trigonometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Trigonometry (foundations)"
           ]
         },
         {
           title: "Statistics & Probability",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Statistics and probability"
           ]
         },
         {
           title: "Problem Solving",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Problem-solving and logical reasoning"
           ]
@@ -1916,42 +1916,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Motion, Forces & Energy",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Motion, forces, and energy"
           ]
         },
         {
           title: "Thermal Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Thermal physics"
           ]
         },
         {
           title: "Waves",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Waves (light and sound)"
           ]
         },
         {
           title: "Electricity & Magnetism",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Electricity and magnetism"
           ]
         },
         {
           title: "Atomic Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic physics"
           ]
         },
         {
           title: "Practical Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Experimental and practical skills"
           ]
@@ -1967,42 +1967,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "States of Matter",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "States of matter"
           ]
         },
         {
           title: "Atomic Structure",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure and bonding"
           ]
         },
         {
           title: "Chemical Reactions",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Chemical reactions and equations"
           ]
         },
         {
           title: "Acids, Bases & Salts",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Acids, bases, and salts"
           ]
         },
         {
           title: "Metals",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Metals and extraction"
           ]
         },
         {
           title: "Organic Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Organic chemistry (introductory)"
           ]
@@ -2018,35 +2018,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Cell Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Cell biology"
           ]
         },
         {
           title: "Physiology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Plant and animal physiology"
           ]
         },
         {
           title: "Human Biology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Human body systems"
           ]
         },
         {
           title: "Genetics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Genetics and variation"
           ]
         },
         {
           title: "Ecology",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Ecology and environment"
           ]
@@ -2062,14 +2062,14 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Reading Comprehension",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Reading comprehension"
           ]
         },
         {
           title: "Writing Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Summary and directed writing",
             "Narrative and descriptive writing"
@@ -2077,7 +2077,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Language Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Language analysis and accuracy"
           ]
@@ -2093,21 +2093,21 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Comprehension",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Reading and listening comprehension"
           ]
         },
         {
           title: "Writing & Grammar",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Writing and grammar"
           ]
         },
         {
           title: "Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Everyday communication skills"
           ]
@@ -2123,14 +2123,14 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Basic Economics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Basic economic concepts"
           ]
         },
         {
           title: "Microeconomics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Demand and supply",
             "Market structures"
@@ -2138,7 +2138,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
         },
         {
           title: "Macroeconomics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "National and international economics"
           ]
@@ -2154,28 +2154,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Business Activity",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Business activity and organisation"
           ]
         },
         {
           title: "Business Functions",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Marketing, finance, and operations"
           ]
         },
         {
           title: "People in Business",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Human resources"
           ]
         },
         {
           title: "Decision Making",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Business decision-making"
           ]
@@ -2191,21 +2191,21 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "International Relations",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "International relations"
           ]
         },
         {
           title: "World History",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "World history themes"
           ]
         },
         {
           title: "Source Analysis",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Source-based analysis"
           ]
@@ -2221,28 +2221,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Data Representation",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data representation"
           ]
         },
         {
           title: "Hardware & Software",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Hardware and software"
           ]
         },
         {
           title: "Programming",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Programming concepts"
           ]
         },
         {
           title: "Algorithms",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algorithms and problem-solving"
           ]
@@ -2258,28 +2258,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Digital Communication",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Digital communication"
           ]
         },
         {
           title: "Data Handling",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data handling"
           ]
         },
         {
           title: "Web Authoring",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Web authoring"
           ]
         },
         {
           title: "Practical Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Practical ICT skills"
           ]
@@ -2411,42 +2411,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Algebra and Functions",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algebra and functions"
           ]
         },
         {
           title: "Coordinate Geometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Coordinate geometry"
           ]
         },
         {
           title: "Trigonometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Trigonometry"
           ]
         },
         {
           title: "Exponentials and Logarithms",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Exponentials and logarithms"
           ]
         },
         {
           title: "Probability and Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Probability and statistics"
           ]
         },
         {
           title: "Mechanics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Mechanics (introductory)"
           ]
@@ -2462,35 +2462,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Physical Quantities",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Physical quantities and units"
           ]
         },
         {
           title: "Kinematics and Dynamics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Kinematics and dynamics"
           ]
         },
         {
           title: "Forces and Energy",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Forces, work, energy, and power"
           ]
         },
         {
           title: "Waves",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Waves and superposition"
           ]
         },
         {
           title: "Electricity",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Electricity and basic circuits"
           ]
@@ -2506,42 +2506,42 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Atomic Structure",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Atomic structure and bonding"
           ]
         },
         {
           title: "Stoichiometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Stoichiometry"
           ]
         },
         {
           title: "States of Matter",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "States of matter"
           ]
         },
         {
           title: "Energetics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Energetics"
           ]
         },
         {
           title: "Organic Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Introduction to organic chemistry"
           ]
         },
         {
           title: "Practical Skills",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Practical and experimental skills"
           ]
@@ -2557,35 +2557,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Basic Economic Concepts",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Basic economic concepts"
           ]
         },
         {
           title: "Supply and Demand",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Demand and supply analysis"
           ]
         },
         {
           title: "Elasticity",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Elasticity"
           ]
         },
         {
           title: "Market Structures",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Market structures"
           ]
         },
         {
           title: "Government Intervention",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Government intervention"
           ]
@@ -2601,28 +2601,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Data Representation",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data representation"
           ]
         },
         {
           title: "Hardware and Software",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Computer hardware and software"
           ]
         },
         {
           title: "Programming Concepts",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Programming concepts"
           ]
         },
         {
           title: "Algorithms",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algorithms and problem-solving"
           ]
@@ -2640,35 +2640,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Advanced Algebra",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced algebra and functions"
           ]
         },
         {
           title: "Trigonometry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Trigonometric identities and equations"
           ]
         },
         {
           title: "Calculus",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Calculus: differentiation and integration"
           ]
         },
         {
           title: "Advanced Statistics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced probability and statistics"
           ]
         },
         {
           title: "Mechanics Applications",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Mechanics applications"
           ]
@@ -2684,28 +2684,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Complex Numbers",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Complex numbers"
           ]
         },
         {
           title: "Matrices and Vectors",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Matrices and vectors"
           ]
         },
         {
           title: "Advanced Calculus",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced calculus"
           ]
         },
         {
           title: "Differential Equations",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Differential equations"
           ]
@@ -2721,35 +2721,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Circular Motion",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Circular motion and gravitation"
           ]
         },
         {
           title: "Oscillations",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Oscillations"
           ]
         },
         {
           title: "Fields",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Electric and magnetic fields"
           ]
         },
         {
           title: "Quantum Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Quantum physics"
           ]
         },
         {
           title: "Nuclear Physics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Nuclear physics"
           ]
@@ -2765,35 +2765,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Reaction Kinetics",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Reaction kinetics"
           ]
         },
         {
           title: "Chemical Equilibria",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Chemical equilibria"
           ]
         },
         {
           title: "Electrochemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Electrochemistry"
           ]
         },
         {
           title: "Advanced Organic Chemistry",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced organic chemistry"
           ]
         },
         {
           title: "Analytical Techniques",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Analytical techniques"
           ]
@@ -2809,28 +2809,28 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Microeconomic Theory",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Microeconomic theory"
           ]
         },
         {
           title: "Macroeconomic Policy",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Macroeconomic policy"
           ]
         },
         {
           title: "International Trade",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "International trade"
           ]
         },
         {
           title: "Economic Development",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Economic growth and development"
           ]
@@ -2846,35 +2846,35 @@ export const CAMBRIDGE_SUBJECT_DATA = {
       topics: [
         {
           title: "Data Structures",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Data structures"
           ]
         },
         {
           title: "Algorithms and Complexity",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Algorithms and complexity"
           ]
         },
         {
           title: "Software Development",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Software development"
           ]
         },
         {
           title: "Database Systems",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Database systems"
           ]
         },
         {
           title: "Advanced Programming",
-          icon: <Info className="w-5 h-5" />,
+          icon: <CheckCircle2 className="w-5 h-5" />,
           subtopics: [
             "Advanced programming"
           ]
@@ -3059,32 +3059,33 @@ const SubjectDetail = () => {
 
       {/* Decorative Background Blobs */}
       <div className="fixed top-0 left-0 w-full h-full overflow-hidden pointer-events-none z-0">
-        <div className="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-teal-200/40 rounded-full blur-[100px]" />
-        <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-blue-200/30 rounded-full blur-[120px]" />
+        <div className="absolute top-[-10%] right-[-5%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-teal-200/40 rounded-full blur-[80px] md:blur-[100px]" />
+        <div className="absolute bottom-[-10%] left-[-5%] w-[400px] md:w-[600px] h-[400px] md:h-[600px] bg-blue-200/30 rounded-full blur-[100px] md:blur-[120px]" />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 pt-28 md:pt-40 pb-12">
+      {/* Main Content Container - Optimized padding for mobile */}
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-24 md:pt-40 pb-12">
 
         {/* Breadcrumb Navigation */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="flex items-center gap-2 text-sm text-slate-600 mb-8"
+          className="flex flex-wrap items-center gap-2 text-xs md:text-sm text-slate-600 mb-6 md:mb-8"
         >
           <Link 
             to={boardRoute} 
-            className="hover:text-teal-600 transition-colors"
+            className="hover:text-teal-600 transition-colors whitespace-nowrap"
           >
             {board}
           </Link>
           <span className="text-slate-400">/</span>
-          <span className="hover:text-teal-600 transition-colors cursor-pointer">
+          <span className="hover:text-teal-600 transition-colors cursor-pointer whitespace-nowrap">
             CLASS {grade ? `${grade}th` : '9th'}
           </span>
-          
-         
           <span className="text-slate-400">/</span>
-          <span className="text-slate-900 font-medium">{subjectData.name}</span>
+          <span className="text-slate-900 font-medium truncate max-w-[150px] md:max-w-none">
+            {subjectData.name}
+          </span>
         </motion.div>
 
         {/* Subject Header */}
@@ -3092,25 +3093,27 @@ const SubjectDetail = () => {
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.1 }}
-          className="mb-12"
+          className="mb-8 md:mb-12"
         >
           <button
             onClick={() => navigate(boardRoute)}
-            className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium mb-6 transition-colors"
+            className="flex items-center gap-2 text-teal-600 hover:text-teal-700 font-medium mb-6 transition-colors text-sm md:text-base"
           >
-            <ArrowLeft className="w-5 h-5" />
+            <ArrowLeft className="w-4 h-4 md:w-5 md:h-5" />
             Back to Subjects
           </button>
 
-          <div className="flex items-start gap-6">
-            <div className={`w-20 h-20 rounded-2xl ${subjectData.color} flex items-center justify-center shrink-0`}>
-              {subjectData.icon}
+          {/* Header Layout: Stack on mobile, Row on Desktop */}
+          <div className="flex flex-col md:flex-row items-start gap-5 md:gap-6">
+            <div className={`w-16 h-16 md:w-20 md:h-20 rounded-2xl ${subjectData.color} flex items-center justify-center shrink-0 shadow-sm`}>
+              {/* Clone element to adjust icon size properly */}
+              {React.cloneElement(subjectData.icon, { className: "w-8 h-8 md:w-10 md:h-10" })}
             </div>
             <div>
-              <h1 className="text-4xl md:text-5xl font-extrabold text-slate-900 mb-4">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-900 mb-3 md:mb-4 leading-tight">
                 {subjectData.name}
               </h1>
-              <p className="text-lg text-slate-600 max-w-3xl leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 max-w-3xl leading-relaxed">
                 {subjectData.description}
               </p>
             </div>
@@ -3122,35 +3125,42 @@ const SubjectDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2 }}
-          className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-white/60 p-8 md:p-12 shadow-sm"
+          // Optimized padding and border radius for mobile
+          className="bg-white/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] border border-white/60 p-5 sm:p-8 md:p-12 shadow-sm"
         >
-          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8">
-            What You Will Learn in {subjectData.name}
+          <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6 md:mb-8">
+            What You Will Learn
           </h2>
 
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {subjectData.topics.map((topic, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.3 + index * 0.1 }}
-                className="bg-white rounded-2xl border border-slate-100 overflow-hidden"
+                className="bg-white rounded-xl md:rounded-2xl border border-slate-100 overflow-hidden shadow-xs"
               >
                 <button
                   onClick={() => toggleTopic(index)}
-                  className="w-full px-6 py-4 flex items-center justify-between hover:bg-slate-50 transition-colors"
+                  className="w-full px-4 py-4 md:px-6 md:py-5 flex items-start md:items-center justify-between hover:bg-slate-50 transition-colors gap-3"
                 >
-                  <div className="flex items-center gap-4">
-                    <div className="w-10 h-10 rounded-full bg-slate-50 flex items-center justify-center">
-                      {topic.icon}
+                  <div className="flex items-start md:items-center gap-3 md:gap-4 flex-1 text-left">
+                    <div className="w-8 h-8 md:w-10 md:h-10 rounded-full bg-slate-50 flex items-center justify-center shrink-0 mt-0.5 md:mt-0">
+                       {/* Scale down icon slightly on mobile */}
+                       {React.cloneElement(topic.icon, { className: "w-4 h-4 md:w-5 md:h-5" })}
                     </div>
-                    <div className="text-left">
-                      <h3 className="text-lg font-semibold text-slate-800">{topic.title}</h3>
-                      <p className="text-sm text-slate-500">{topic.subtopics.length} Topics</p>
+                    <div className="min-w-0">
+                      <h3 className="text-base md:text-lg font-semibold text-slate-800 leading-tight break-words">
+                        {topic.title}
+                      </h3>
+                      <p className="text-xs md:text-sm text-slate-500 mt-0.5">
+                        {topic.subtopics.length} Topics
+                      </p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-2">
+                  
+                  <div className="flex items-center pt-1 md:pt-0 pl-2">
                     {expandedTopics.has(index) ? (
                       <ChevronUp className="w-5 h-5 text-slate-400" />
                     ) : (
@@ -3168,12 +3178,12 @@ const SubjectDetail = () => {
                       transition={{ duration: 0.3, ease: "easeInOut" }}
                       className="overflow-hidden"
                     >
-                      <div className="px-6 pb-4 pt-2 border-t border-slate-100">
-                        <div className="space-y-3">
+                      <div className="px-4 md:px-6 pb-4 md:pb-5 pt-1 border-t border-slate-100">
+                        <div className="space-y-2 md:space-y-3">
                           {topic.subtopics.map((subtopic, subIndex) => (
-                            <div key={subIndex} className="flex items-center gap-3 py-2">
-                              <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0" />
-                              <span className="text-slate-700">{subtopic}</span>
+                            <div key={subIndex} className="flex items-start gap-3 py-1.5">
+                              <CheckCircle2 className="w-4 h-4 md:w-5 md:h-5 text-teal-500 shrink-0 mt-0.5" />
+                              <span className="text-sm md:text-base text-slate-700 leading-relaxed">{subtopic}</span>
                             </div>
                           ))}
                         </div>
@@ -3186,98 +3196,79 @@ const SubjectDetail = () => {
           </div>
         </motion.div>
 
-        {/* Learning Approach Section - Only for Cambridge Class 6, 7 & 8 */}
+        {/* Learning Approach Section */}
         {(grade === 6 || grade === 7 || grade === 8) && (
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-white/60 p-8 md:p-12 shadow-sm mt-8"
+            className="bg-white/50 backdrop-blur-sm rounded-3xl md:rounded-[2.5rem] border border-white/60 p-5 sm:p-8 md:p-12 shadow-sm mt-6 md:mt-8"
           >
-            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-slate-800 mb-6 md:mb-8">
               Learning Approach
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
               <div>
                 <h3 className="text-lg font-semibold text-slate-700 mb-4">Our Teaching Method</h3>
                 <ul className="space-y-3">
+                  {/* ... (Keep your existing Grade 6/7/8 logic lists exactly as they are) ... */}
                   {grade === 6 ? (
                     <>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Concept-based learning (not rote)</span>
+                        <span className="text-slate-600 text-sm md:text-base">Concept-based learning (not rote)</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Interactive and discussion-driven classes</span>
+                        <span className="text-slate-600 text-sm md:text-base">Interactive and discussion-driven classes</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Regular assessments and feedback</span>
+                        <span className="text-slate-600 text-sm md:text-base">Regular assessments and feedback</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Focus on clarity, confidence & curiosity</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Strong preparation for Cambridge IGCSE pathway</span>
+                        <span className="text-slate-600 text-sm md:text-base">Focus on clarity, confidence & curiosity</span>
                       </li>
                     </>
                   ) : grade === 7 ? (
                     <>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Concept-based and inquiry-driven teaching</span>
+                        <span className="text-slate-600 text-sm md:text-base">Concept-based and inquiry-driven teaching</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Interactive live classes</span>
+                        <span className="text-slate-600 text-sm md:text-base">Interactive live classes</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Regular assessments and progress tracking</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Individual feedback and academic support</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Focus on confidence and independent learning</span>
+                        <span className="text-slate-600 text-sm md:text-base">Regular assessments and progress tracking</span>
                       </li>
                     </>
                   ) : (
                     <>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Concept-driven teaching methodology</span>
+                        <span className="text-slate-600 text-sm md:text-base">Concept-driven teaching methodology</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Interactive classes with real-world examples</span>
+                        <span className="text-slate-600 text-sm md:text-base">Interactive classes with real-world examples</span>
                       </li>
                       <li className="flex items-start gap-3">
                         <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Regular assessments and topic-wise evaluations</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Personalised feedback and academic guidance</span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <CheckCircle2 className="w-5 h-5 text-teal-500 shrink-0 mt-0.5" />
-                        <span className="text-slate-600">Focus on IGCSE readiness</span>
+                        <span className="text-slate-600 text-sm md:text-base">Focus on IGCSE readiness</span>
                       </li>
                     </>
                   )}
                 </ul>
               </div>
 
-              <div className="bg-linear-to-br from-teal-50 to-emerald-50 rounded-2xl p-6 border border-teal-100">
+              <div className="bg-linear-to-br from-teal-50 to-emerald-50 rounded-2xl p-5 md:p-6 border border-teal-100">
                 <h3 className="text-lg font-semibold text-slate-700 mb-3">For Parents</h3>
-                <p className="text-slate-600 leading-relaxed">
+                <p className="text-slate-600 leading-relaxed text-sm md:text-base">
                   {grade === 6
                     ? "Cambridge Class 6 at Academio builds strong foundations in Maths, Science, and English, helping students develop critical thinking, confidence, and readiness for future international curricula."
                     : grade === 7
@@ -3295,20 +3286,20 @@ const SubjectDetail = () => {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
-          className="mt-16 bg-linear-to-r from-teal-600 to-emerald-500 rounded-3xl p-8 md:p-12 text-center text-white"
+          className="mt-10 md:mt-16 bg-linear-to-r from-teal-600 to-emerald-500 rounded-3xl p-8 md:p-12 text-center text-white"
         >
           <h2 className="text-2xl md:text-3xl font-bold mb-4">
             Ready to Master {subjectData.name}?
           </h2>
-          <p className="text-teal-50 mb-8 max-w-2xl mx-auto">
+          <p className="text-teal-50 mb-8 max-w-2xl mx-auto text-sm md:text-base">
             Join our comprehensive IGCSE {subjectData.name} program and excel in your exams with expert guidance.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full sm:w-auto">
             <motion.button
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/enrollment-form')}
-              className="bg-white text-teal-700 px-8 py-3 rounded-full font-bold shadow-lg hover:shadow-xl transition-all"
+              className="bg-white text-teal-700 px-8 py-3.5 md:py-4 rounded-full font-bold shadow-lg hover:shadow-xl transition-all text-sm md:text-base w-full sm:w-auto"
             >
               Enroll Now
             </motion.button>
@@ -3316,7 +3307,7 @@ const SubjectDetail = () => {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               onClick={() => navigate('/enrollment-form')}
-              className="bg-transparent border-2 border-white text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-white hover:text-teal-700 transition-all"
+              className="bg-transparent border-2 border-white text-white px-8 py-3.5 md:py-4 rounded-full font-bold shadow-lg hover:bg-white hover:text-teal-700 transition-all text-sm md:text-base w-full sm:w-auto"
             >
               Consult Now
             </motion.button>

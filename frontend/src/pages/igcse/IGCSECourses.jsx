@@ -120,91 +120,125 @@ const ModernIGCSE = () => {
         </div>
 
         {/* --- DYNAMIC SUBJECTS SECTION (Expands Below) --- */}
-        <AnimatePresence mode="wait">
-          {selectedClass !== null && (
-            <motion.div
-              key={selectedClass}
-              initial={{ opacity: 0, height: 0, y: 20 }}
-              animate={{ opacity: 1, height: 'auto', y: 0 }}
-              exit={{ opacity: 0, height: 0, y: -20 }}
-              transition={{ duration: 0.4, ease: "easeInOut" }}
-              className="overflow-hidden"
-            >
-              <div className="bg-white/50 backdrop-blur-sm rounded-[2.5rem] border border-white/60 p-8 md:p-12 mb-12 shadow-sm">
-                <div className="flex items-center justify-between mb-8">
-                  <div>
-                    <h3 className="text-2xl font-bold text-slate-800 flex items-center gap-3">
-                      Subjects for Class {selectedClass}
-                      <span className="text-sm font-normal text-slate-500 bg-white px-3 py-1 rounded-full border border-slate-200">
-                        {selectedClass >= 11 ? (selectedClass >= 12 ? 'A Level Syllabus' : 'AS Level Syllabus') : 'IGCSE Syllabus'}
-                      </span>
-                    </h3>
-                  </div>
-                  <button
-                    onClick={() => setSelectedClass(null)}
-                    className="p-2 hover:bg-slate-200 rounded-full transition-colors text-slate-500"
-                  >
-                    <X className="w-6 h-6" />
-                  </button>
+       <AnimatePresence mode="wait">
+  {selectedClass !== null && (
+    <motion.div
+      key={selectedClass}
+      initial={{ opacity: 0, height: 0, y: 20 }}
+      animate={{ opacity: 1, height: 'auto', y: 0 }}
+      exit={{ opacity: 0, height: 0, y: -20 }}
+      transition={{ duration: 0.4, ease: "easeInOut" }}
+      className="overflow-hidden"
+    >
+      {/* Container Background */}
+      <div className="bg-white/70 backdrop-blur-xl rounded-[2rem] border border-white/60 p-4 md:p-8 mb-12 shadow-sm relative z-10">
+        
+        {/* Header */}
+        <div className="flex flex-col md:flex-row items-start md:items-center justify-between mb-6 md:mb-8 gap-4 border-b border-slate-100 pb-4 md:pb-6">
+          <div>
+            <h3 className="text-xl md:text-2xl font-bold text-slate-800 flex flex-wrap items-center gap-2 md:gap-3">
+              Class {selectedClass} Syllabus
+              <span className="text-[10px] md:text-xs font-bold tracking-wide uppercase text-teal-700 bg-teal-50/80 px-2 md:px-3 py-1 rounded-lg border border-teal-100/50">
+                {selectedClass >= 11 
+                  ? (selectedClass >= 12 ? 'A Level' : 'AS Level') 
+                  : 'IGCSE'}
+              </span>
+            </h3>
+          </div>
+          <button
+            onClick={() => setSelectedClass(null)}
+            className="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full bg-slate-100 hover:bg-rose-50 hover:text-rose-600 text-slate-500 text-xs md:text-sm font-medium transition-all duration-200"
+          >
+            <span className="inline">Close</span>
+            <X className="w-3 h-3 md:w-4 md:h-4" />
+          </button>
+        </div>
+
+        {/* Subjects Grid - CHANGED to grid-cols-2 for mobile */}
+        <motion.div
+          variants={{
+            hidden: { opacity: 0 },
+            visible: { opacity: 1, transition: { staggerChildren: 0.05 } }
+          }}
+          initial="hidden"
+          animate="visible"
+          className="grid grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-3 md:gap-5"
+        >
+          {(() => {
+            const gradeKey = selectedClass >= 12 ? 'grade12' : selectedClass >= 11 ? 'grade11' : `grade${selectedClass}`;
+            const subjects = SUBJECT_DATA[gradeKey];
+
+            if (!subjects) {
+              return (
+                <div className="col-span-full py-12 text-center text-slate-400 border-2 border-dashed border-slate-100 rounded-2xl text-sm">
+                  Data updating...
                 </div>
+              );
+            }
 
+            return Object.entries(subjects).map(([key, subject]) => {
+              const subjectSlug = key.replace(/([A-Z])/g, "-$1").toLowerCase();
+
+              return (
                 <motion.div
-                  variants={gridContainerVariants}
-                  initial="hidden"
-                  animate="visible"
-                  exit="exit"
-                  className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
-                >
-                  {(() => {
-                    const gradeKey = selectedClass >= 12 ? 'grade12' : selectedClass >= 11 ? 'grade11' : `grade${selectedClass}`;
-                    const subjects = SUBJECT_DATA[gradeKey];
-
-                    if (!subjects) {
-                      return (
-                        <div className="col-span-full py-12 text-center text-slate-500 bg-white/50 rounded-2xl">
-                          <p>No specific subject data available for Class {selectedClass} yet.</p>
-                        </div>
-                      );
-                    }
-
-                    return Object.entries(subjects).map(([key, subject], index) => {
-                      const subjectSlug = key.replace(/([A-Z])/g, "-$1").toLowerCase(); // e.g. englishFirstLanguage -> english-first-language
-
-                      return (
-                        <motion.div
-                          key={key}
-                          variants={cardVariants}
-                          whileHover={{ y: -5 }}
-                          onClick={() => {
-                            window.scrollTo(0, 0);
-                            navigate(`/subject/${subjectSlug}`, {
-                              state: {
-                                grade: selectedClass,
-                                board: 'IGCSE'
-                              }
-                            });
-                          }}
-                          className="bg-white rounded-3xl p-6 shadow-sm hover:shadow-xl hover:shadow-teal-900/5 border border-slate-100 transition-all duration-300 group cursor-pointer"
-                        >
-                          <div className="flex items-start justify-between mb-4">
-                            <div className={`w-12 h-12 rounded-xl ${subject.color} flex items-center justify-center`}>
-                              {subject.icon}
-                            </div>
-                            <div className="w-8 h-8 rounded-full bg-slate-50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                              <ArrowRight className="w-4 h-4 text-slate-600" />
-                            </div>
-                          </div>
-                          <h4 className="text-lg font-bold text-slate-800">{subject.name}</h4>
-                          <p className="text-sm text-slate-400 mt-1">View Syllabus details</p>
-                        </motion.div>
-                      );
+                  key={key}
+                  variants={{
+                    hidden: { opacity: 0, y: 10 },
+                    visible: { opacity: 1, y: 0 }
+                  }}
+                  whileHover={{ y: -4 }}
+                  onClick={() => {
+                    window.scrollTo(0, 0);
+                    navigate(`/subject/${subjectSlug}`, {
+                      state: { grade: selectedClass, board: 'IGCSE' }
                     });
-                  })()}
+                  }}
+                  className="group relative bg-white rounded-xl md:rounded-2xl border border-slate-100 shadow-sm hover:shadow-lg hover:shadow-teal-900/5 transition-all duration-300 cursor-pointer overflow-hidden flex flex-col h-full"
+                >
+                  
+                  {/* BACKGROUND ICON (Decorative) - Scaled down for mobile */}
+                  <div className={`absolute -right-3 -bottom-3 opacity-[0.05] group-hover:opacity-[0.1] transition-all duration-500 transform rotate-12 group-hover:rotate-0 group-hover:scale-110 pointer-events-none grayscale group-hover:grayscale-0 ${subject.color.split(' ')[1]}`}>
+                    {React.cloneElement(subject.icon, { className: "w-20 h-20 md:w-32 md:h-32" })}
+                  </div>
+
+                  {/* Card Content */}
+                  <div className="p-4 md:p-5 flex flex-col h-full relative z-10">
+                    
+                    {/* Top Row: Icon */}
+                    <div className="flex justify-between items-start mb-3 md:mb-4">
+                      <div className={`w-10 h-10 md:w-12 md:h-12 rounded-lg md:rounded-xl ${subject.color} flex items-center justify-center shadow-xs group-hover:scale-105 transition-transform duration-300`}>
+                        {React.cloneElement(subject.icon, { className: "w-5 h-5 md:w-6 md:h-6" })}
+                      </div>
+                      
+                      {/* Hover Pill - Hidden on mobile, visible on desktop hover */}
+                      <div className="hidden md:block opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-slate-900 text-white text-[10px] font-bold px-2 py-1 rounded-md">
+                        VIEW
+                      </div>
+                    </div>
+
+                    {/* Subject Name - Font size adjusted for mobile columns */}
+                    <div className="mb-3 md:mb-4 flex-grow">
+                      <h4 className="text-sm md:text-lg font-bold text-slate-800 leading-snug group-hover:text-teal-700 transition-colors line-clamp-3 md:line-clamp-none">
+                        {subject.name}
+                      </h4>
+                    </div>
+
+                    {/* Footer Button */}
+                    <div className="mt-auto pt-3 md:pt-4 border-t border-slate-50 flex items-center text-slate-400 group-hover:text-teal-600 transition-colors text-[10px] md:text-sm font-medium gap-1.5 md:gap-2">
+                      <span>View Details</span>
+                      <ArrowRight className="w-3 h-3 md:w-4 md:h-4 transform group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                  
                 </motion.div>
-              </div>
-            </motion.div>
-          )}
-        </AnimatePresence>
+              );
+            });
+          })()}
+        </motion.div>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
 
         {/* --- ENROLLMENT CTA SECTION --- */}
         <div className="bg-gradient-to-r from-teal-600 to-emerald-500 rounded-[2.5rem] p-8 md:p-12 mb-12 shadow-lg relative overflow-hidden">
@@ -218,7 +252,7 @@ const ModernIGCSE = () => {
             className="relative z-10 text-center"
           >
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-              Ready to Excel in Class {selectedClass || 'Your Selected Class'}?
+              Start Your Learning Journey
             </h2>
             <p className="text-teal-50 text-lg mb-8 max-w-2xl mx-auto">
               Join thousands of students achieving academic excellence with our expert-led IGCSE programs.
@@ -278,10 +312,10 @@ const ModernIGCSE = () => {
           className="max-w-4xl mx-auto"
         >
           <h2 className="text-3xl md:text-5xl font-extrabold text-white mb-6 drop-shadow-sm">
-            Unlock Your Child's Potential Today
+            Start Learning Today
           </h2>
           <p className="text-teal-50 text-lg md:text-xl mb-10 font-medium max-w-2xl mx-auto">
-            Sign up for a free consultation or trial class and give your child the academic advantage they deserve.
+            Join our expert-led programs and begin your educational journey with confidence.
           </p>
           <motion.button
             whileHover={{ scale: 1.05 }}
