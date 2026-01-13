@@ -12,7 +12,7 @@ export const IB_SUBJECT_DATA = {
   grade6: {
     english: {
       name: "IB MYP English Language & Literature",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 6 develops communication and critical thinking through fiction and non-fiction texts.",
       topics: [
@@ -137,7 +137,7 @@ export const IB_SUBJECT_DATA = {
   grade7: {
     english: {
       name: "IB MYP English Language & Literature",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 7 deepens conceptual understanding and critical thinking through analysis of diverse texts.",
       topics: [
@@ -286,7 +286,7 @@ export const IB_SUBJECT_DATA = {
   grade8: {
     english: {
       name: "IB MYP English Language & Literature",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 8 strengthens analytical thinking and independent learning through complex text analysis.",
       topics: [
@@ -435,7 +435,7 @@ export const IB_SUBJECT_DATA = {
   grade9: {
     english: {
       name: "IB MYP English Language & Literature",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 9 builds conceptual depth through critical analysis and academic writing.",
       topics: [
@@ -581,7 +581,7 @@ export const IB_SUBJECT_DATA = {
   grade10: {
     english: {
       name: "IB MYP English Language & Literature",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "IB MYP English Language & Literature – Class 10 completes MYP with advanced analytical and communication skills.",
       topics: [
@@ -1400,7 +1400,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
   grade6: {
     english: {
       name: "English",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "Cambridge Lower Secondary English develops strong reading, writing, speaking and listening skills through concept-based learning and interactive discussions.",
       topics: [
@@ -1550,7 +1550,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
   grade7: {
     english: {
       name: "English",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "Cambridge Lower Secondary English develops analytical reading, structured writing, and confident communication through diverse texts and interactive learning.",
       topics: [
@@ -1700,7 +1700,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
   grade8: {
     english: {
       name: "English",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "Cambridge Lower Secondary English develops fluent communication, critical expression, and academic writing readiness through complex texts and structured learning.",
       topics: [
@@ -2056,7 +2056,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
 
     englishFirstLanguage: {
       name: "Cambridge IGCSE English First Language – 0500",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "Cambridge IGCSE English First Language – 0500 develops advanced reading, writing and communication skills for academic and professional success.",
       topics: [
@@ -2087,7 +2087,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
 
     hindiSecondLanguage: {
       name: "Cambridge IGCSE Hindi as a Second Language – 0549",
-      icon: <Type className="w-8 h-8" />,
+      icon: <span className="w-8 h-8 flex items-center justify-center text-2xl font-bold text-orange-600">अ</span>,
       color: "bg-orange-50 text-orange-600",
       description: "Cambridge IGCSE Hindi as a Second Language – 0549 develops proficiency in Hindi through comprehensive language skills development.",
       topics: [
@@ -2339,7 +2339,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
 
     englishFirstLanguage: {
       name: "Cambridge IGCSE English First Language – 0500",
-      icon: <Type className="w-8 h-8" />,
+      icon: <BookOpen className="w-8 h-8" />,
       color: "bg-indigo-50 text-indigo-600",
       description: "Cambridge IGCSE English First Language – 0500 completes the two-year course with advanced reading and writing skills.",
       topics: []
@@ -2355,7 +2355,7 @@ export const CAMBRIDGE_SUBJECT_DATA = {
 
     hindiSecondLanguage: {
       name: "Cambridge IGCSE Hindi as a Second Language – 0549",
-      icon: <Type className="w-8 h-8" />,
+      icon: <span className="w-8 h-8 flex items-center justify-center text-2xl font-bold text-orange-600">अ</span>,
       color: "bg-orange-50 text-orange-600",
       description: "Cambridge IGCSE Hindi as a Second Language – 0549 develops proficiency in Hindi through comprehensive language skills.",
       topics: []

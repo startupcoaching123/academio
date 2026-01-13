@@ -156,7 +156,7 @@ const Hero = () => {
                                             </div>
                                         ))}
                                     </div>
-                                    <span className="text-sm font-bold text-slate-900">10k+ Active</span>
+                                    <span className="text-sm font-bold text-slate-900">100+ Active</span>
                                 </div>
                                 <div className="w-full bg-slate-100 h-1.5 rounded-full overflow-hidden">
                                     <div className="bg-teal-500 w-[85%] h-full rounded-full"></div>
